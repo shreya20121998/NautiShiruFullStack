@@ -1,0 +1,180 @@
+<mvc:View controllerName="nauticalfe.controller.MastSaveAsVariant"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
+    xmlns="sap.m">
+    <Page >
+        <headerContent>
+            <!-- Your header content goes here -->
+                <Bar class="customHeader">
+                    <contentLeft>
+                        <core:Icon
+                            src="sap-icon://nav-back"
+                            class="size1"
+                            color="#FFFFFF"
+                            press="backPress"
+                        />
+                        <core:Icon
+                            src="sap-icon://home"
+                            class="size1"
+                            color="#FFFFFF"
+                            press="onBackPressHome"
+                        />
+                        <Image
+                            src="../images/ingenxlogo.jpg"
+                            height="75%"
+                        />
+                        <Text
+                            class="textBid"
+                            text="Upload Program of Port"
+                        />
+                    </contentLeft>
+                    <contentRight>
+                        <core:Icon
+                            src="sap-icon://search"
+                            class="size1"
+                            color="#FFFFFF"
+                        >
+                            <core:layoutData>
+                                <FlexItemData growFactor="1" />
+                            </core:layoutData>
+                        </core:Icon>
+                        <core:Icon
+                            src="sap-icon://SAP-icons-TNT/user"
+                            class="size1"
+                            color="#FFFFFF"
+                        >
+                            <core:layoutData>
+                                <FlexItemData growFactor="1" />
+                            </core:layoutData>
+                        </core:Icon>
+                    </contentRight>
+                </Bar>
+        </headerContent>
+
+        <Bar id="_IDGenBar1" class="_IDGenBar1">
+            <contentLeft>
+                <Button id="_IDGenButton1" text="Use Screen Assignment" press=""></Button>
+                <Button id="_IDGenButton2" text="Information about variant attributes" press="onInformationPress"></Button>
+                <Button id="button" icon="sap-icon://slim-arrow-down" iconFirst="false" text="More" press="onPress" ariaHasPopup="Menu"/>
+            </contentLeft>
+            <contentRight>
+                <Button id="_IDGenButton4" text="Exit" press="onExit"></Button>
+            </contentRight>
+        </Bar>
+
+        <VBox >
+            <HBox class="LabelInput1">
+                <Label text="Variant Name:"></Label>
+                <Input ></Input>
+            </HBox>
+            <HBox class="LabelInput2 ">
+                <Label text="Description:"></Label>
+                <Input ></Input>
+            </HBox>
+         
+            <CheckBox text="Only for Background Processing" class="" textAlign="Center"></CheckBox>
+            <CheckBox text="Protect Variant"></CheckBox>
+            <CheckBox text="Only Display in Catalog"></CheckBox>
+            <CheckBox text="System Variant(Automatic Transport)" enabled="false" ></CheckBox>
+
+            <Text text="Screen Assignment" class="tableHeading" />
+            <Table id="tableId" mode="MultiSelect" width="40%"  >
+                <columns>
+                    <Column id="_IDGenColumn1" width="20%" >
+                        <Text id="_IDGenText1" text="Created"  />
+                    </Column>
+                    <Column id="_IDGenColumn2" width="30%">
+                        <Text id="_IDGenText2" text="Selection Screen"  />
+                    </Column>
+                    <Column id="_IDGenColumn3" width="50%" >
+                        <Text id="_IDGenText3" text="" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1">
+                        <cells>
+                            <CheckBox id="chxbox"/>
+
+                            <Text id="_IDGenInput2" text="1000" />
+                            
+                            <Text id="_IDGenText4" text=""></Text>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+
+            <Text text="Objects For Selection Screen" class="tableHeading" />
+
+            <HBox>
+                <Button icon="sap-icon://sort-ascending" class="btnIcon"/>
+                <Button icon="sap-icon://sort-descending" class="btnIcon"/>
+                <Button icon="sap-icon://search" class="btnIcon"/>
+                <Button icon="sap-icon://print" class="btnIcon"/>
+                <Button icon="" text="Technical Name" class="btnIcon"/>
+                <Button icon="sap-icon://full-screen" class="btnIcon"/>
+            </HBox>
+
+            <Table width="100%" mode="MultiSelect">
+                <columns>
+                    <Column>
+                    <Label text="Dynpro"/>
+                    </Column>
+                    <Column>
+                    <Label text="FieldName"/>
+                    </Column>
+                    <Column>
+                    <Label text="Type"/>
+                    </Column>
+                    <Column>
+                    <Label text="protect Field"/>
+                    </Column>
+                    <Column>
+                    <Label text="Hide Field"/>
+                    </Column>
+                    <Column >
+                    <Label text='Hide field "TO"'/>
+                    </Column>
+                    <Column >
+                    <Label text="Save field without values"/>
+                    </Column>
+                    <Column >
+                    <Label text="Switch GPA off"/>
+                    </Column>
+                    <Column >
+                    <Label text="Required field"/>
+                    </Column>
+                    <Column>
+                    <Label text="Selection Variable"/>
+                    </Column>
+                    <Column>
+                    <Label text="Option"/>
+                    </Column>
+                    <Column>
+                    <Label text="Name of the Variable(Input Only Using F4)"/>
+                    </Column>
+                </columns>
+            </Table>
+
+
+            
+
+
+            
+            
+          
+            
+        </VBox>
+
+
+        <footer>
+            <OverflowToolbar design="Auto">
+            <ToolbarSpacer />
+            <Button text="Save" press="createEntry" ></Button>
+            <Button text="Cancel"  ></Button>
+            </OverflowToolbar>
+        </footer>
+
+
+    </Page>
+</mvc:View>

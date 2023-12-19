@@ -372,7 +372,14 @@
           "target": [
               "TargetPortUpload"
           ]
-      }
+      },
+      {
+        "name": "RouteSaveAsVariant",
+        "pattern": "SaveAsVariant",
+        "target": [
+            "TargetSaveAsVariant"
+        ]
+    }
 
      
       ],
@@ -646,7 +653,14 @@
           "clearControlAggregation": false,
           "viewId": "MastPortUpload",
           "viewName": "MastPortUpload"
-      }
+      },
+      "TargetSaveAsVariant": {
+        "viewType": "XML",
+        "transition": "slide",
+        "clearControlAggregation": false,
+        "viewId": "MastSaveAsVariant",
+        "viewName": "MastSaveAsVariant"
+    }
 
 
        

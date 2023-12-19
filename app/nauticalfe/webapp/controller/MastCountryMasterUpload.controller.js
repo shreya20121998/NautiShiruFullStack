@@ -64,7 +64,55 @@ sap.ui.define([
                   const oRouter = this.getOwnerComponent().getRouter();
                   oRouter.navTo("MastView", {}, true);
                 }
-             }
+            },
+            onExit: function () {
+                const oRouter = this.getOwnerComponent().getRouter();
+                oRouter.navTo("MastView");
+            },
+            onBackPressHome: function () {
+                const oRouter = this.getOwnerComponent().getRouter();
+                oRouter.navTo("RouteView1");
+            },
+            backPress:function(){
+                const oHistory = History.getInstance();
+                const sPreviousHash = oHistory.getPreviousHash();
+        
+                if (sPreviousHash !== undefined) {
+                    window.history.go(-1);
+                } else {
+                    const oRouter = this.getOwnerComponent().getRouter();
+                    oRouter.navTo("MastView", {}, true);
+                }
+            },
+
+            onDownloadPress: function () {
+                // Handle the press event for "Download as Template" button
+      
+                // Add logic to download the template
+                this.downloadTemplate();
+            },
+      
+            downloadTemplate: function () {
+                // Add logic to generate and download the template file
+      
+                // For example, you can create a Blob with the template content
+                var templateContent = "Your template content here";
+                var blob = new Blob([templateContent], { type: "application/octet-stream" });
+      
+                // Create a temporary link element and trigger the download
+                var link = document.createElement("a");
+                link.href = window.URL.createObjectURL(blob);
+                link.download = "template.txt";
+                link.click();
+      
+                // Clean up
+                window.URL.revokeObjectURL(link.href);
+            },
+      
+            onSaveAs:function(){
+              const oRouter = this.getOwnerComponent().getRouter();
+              oRouter.navTo("RouteSaveAsVariant");
+            },
         });
 });
  

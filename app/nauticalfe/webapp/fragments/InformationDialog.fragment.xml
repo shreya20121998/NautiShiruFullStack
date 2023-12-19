@@ -1,0 +1,45 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+
+    <Dialog id="infoDialog"
+        title="Information about variant attributes"
+        contentWidth="600px" contentHeight="400px" titleAlignment="Center"     
+    >
+        <VBox class="txtInfoBox">
+            <Text text="Variant Attributes:" class="boldText" />
+            <Text text="On this screen, you can define the attributes for the variant. Make sure that you enter a meaningful short text." />
+            <Text text="Only for background processing:" class="boldText" />
+            <Text text="If you select this option, the variant can only be used in background processing. You will not be able to start the program with this variant in dialog mode." />
+            <Text text="Variant Attributes:" class="boldText" />
+            <Text text="On this screen, you can define the attributes for the variant. Make sure that you enter a meaningful short text." />
+            <Text text="Only for background processing:" class="boldText" />
+            <Text text="If you select this option, the variant can only be used in background processing. You will not be able to start the program with this variant in dialog mode." />
+            <Text text="Variant Attributes:" class="boldText" />
+            <Text text="On this screen, you can define the attributes for the variant. Make sure that you enter a meaningful short text." />
+            <Text text="Only for background processing:" class="boldText" />
+            <Text text="If you select this option, the variant can only be used in background processing. You will not be able to start the program with this variant in dialog mode." />
+            <Text text="Variant Attributes:" class="boldText" />
+            <Text text="On this screen, you can define the attributes for the variant. Make sure that you enter a meaningful short text." />
+            <Text text="Only for background processing:" class="boldText" />
+            <Text text="If you select this option, the variant can only be used in background processing. You will not be able to start the program with this variant in dialog mode." />
+            <Text text="Variant Attributes:" class="boldText" />
+            <Text text="On this screen, you can define the attributes for the variant. Make sure that you enter a meaningful short text." />
+            <Text text="Only for background processing:" class="boldText" />
+            <Text text="If you select this option, the variant can only be used in background processing. You will not be able to start the program with this variant in dialog mode." />
+            <Text text="Variant Attributes:" class="boldText" />
+            <Text text="On this screen, you can define the attributes for the variant. Make sure that you enter a meaningful short text." />
+            <Text text="Only for background processing:" class="boldText" />
+            <Text text="If you select this option, the variant can only be used in background processing. You will not be able to start the program with this variant in dialog mode." />
+            <Text text="Variant Attributes:" class="boldText" />
+            <Text text="On this screen, you can define the attributes for the variant. Make sure that you enter a meaningful short text." />
+            <Text text="Only for background processing:" class="boldText" />
+            <Text text="If you select this option, the variant can only be used in background processing. You will not be able to start the program with this variant in dialog mode." />
+        </VBox>
+
+
+        <beginButton>
+            <Button text="Ok" press="onOKPress" />
+        </beginButton>
+    </Dialog>
+
+</core:FragmentDefinition>
+
