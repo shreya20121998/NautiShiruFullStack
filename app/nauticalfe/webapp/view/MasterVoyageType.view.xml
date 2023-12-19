@@ -63,7 +63,7 @@
             <contentLeft>
                 <Button
                     text="New Entries"
-                    press="onCreatePress"
+                    press="newEntries"
                 />
                 <Button text="Copy As" />
                 <Button text="Delete" />
@@ -143,6 +143,7 @@
             width="100%"
             class="mastertables"
             visible="false"
+            mode="MultiSelect"
         >
             <columns>
                 <Column>
