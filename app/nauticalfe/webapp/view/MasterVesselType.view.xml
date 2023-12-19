@@ -119,7 +119,7 @@
                 <Button
                     id="_IDGenButton20"
                     text="Exit"
-                    press="MastPage"
+                    press="onExit"
                 />
             </contentRight>
         </Bar>

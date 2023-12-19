@@ -6,45 +6,116 @@
     <Page id="page">
         <headerContent>
             <!-- Your header content goes here -->
-            <Bar id="_IDGenBar2" class="customHeader">
+            <Bar
+                id="_IDGenBar1"
+                class="customHeader"
+            >
                 <contentLeft>
-                    <Button id="_IDGenButton1" class="customHeaderButton"  icon="sap-icon://nav-back" type="Default" />
-                    <Image id="_IDGenImage1" src="../images/ingenxlogo.jpg" height="75%" />
-                    <Text id="_IDGenText1" class="textBid" text="Change View Event Master Table: Overview" />
+                    <core:Icon
+                        id="_IDGenIcon1"
+                        src="sap-icon://nav-back"
+                        class="size1"
+                        color="#FFFFFF"
+                        press="backPress"
+                    />
+                    <core:Icon
+                        id="_IDGenIcon2"
+                        src="sap-icon://home"
+                        class="size1"
+                        color="#FFFFFF"
+                        press="onBackPressHome"
+                    />
+                    <Image
+                        id="_IDGenImage2"
+                        src="../images/ingenxlogo.jpg"
+                        height="75%"
+                    />
+                    <Text
+                        id="_IDGenText1"
+                        class="textBid"
+                        text='Change View Event Master Table: Overview'
+                    />
                 </contentLeft>
- 
                 <contentRight>
-                    <core:Icon id="_IDGenIcon1" src="sap-icon://search" class="size1" color="#FFFFFF">
+                    <core:Icon
+                        id="_IDGIcon3"
+                        src="sap-icon://search"
+                        class="size1"
+                        color="#FFFFFF"
+                    >
                         <core:layoutData>
-                            <FlexItemData id="_IDGenFlexItemData1" growFactor="1" />
+                            <FlexItemData
+                                id="_IDGenFlexItemData1"
+                                growFactor="1"
+                            />
                         </core:layoutData>
                     </core:Icon>
- 
-                    <core:Icon id="_IDGenIcon2" src="sap-icon://SAP-icons-TNT/user" class="size1" color="#FFFFFF" >
+                    <core:Icon
+                        id="_IDGenIcon4"
+                        src="sap-icon://person-placeholder"
+                        class="size1"
+                        color="#FFFFFF"
+                    >
                         <core:layoutData>
-                            <FlexItemData id="_IDGenFlexItemData2" growFactor="1"/>
+                            <FlexItemData
+                                id="_IDGenFlexItemData2"
+                                growFactor="1"
+                            />
                         </core:layoutData>
                     </core:Icon>
                 </contentRight>
             </Bar>
         </headerContent>
-        <Bar id="_IDGenBar1" class="_IDGenBar1" >
+        <Bar
+            id="_IDGenBar12"
+            class="_IDGenBar1"
+         >
             <contentLeft>
-                <Button id="_IDGenButton2" text="New Entries" press="onCreatePress" />
-                <Button id="_IDGenButton3" text="Copy As" />
-                <Button id="_IDGenButton4"  text="Delete" />
-                <Button id="_IDGenButton5" text="Undo Change" />
-                <Button id="_IDGenButton6" text="Select All" />
-                <Button id="_IDGenButton7" text="Select Block" />
-                <Button id="_IDGenButton8" text="Deselect All" />
-                <Button id="button" icon="sap-icon://slim-arrow-down" iconFirst="false" text="More" press="onPress"
-                    ariaHasPopup="Menu"/>
+                <Button
+                    id="_IDGenButton12"
+                    text="New Entries"
+                    press="newEntries"
+                />
+                <Button
+                    id="_IDGenButton13"
+                    text="Copy As"
+                />
+                <Button
+                    id="_IDGenButton14"
+                    text="Delete"
+                    press="onDeleteVoyageType"
+                />
+                <Button
+                    id="_IDGenButton15"
+                    text="Update"
+                    press="onShowUpdateDialog"
+                />
+                
+                <Button
+                    id="button"
+                    icon="sap-icon://slim-arrow-down"
+                    iconFirst="false"
+                    text="More"
+                    press="onPress"
+                    ariaHasPopup="Menu"
+                />
             </contentLeft>
- 
             <contentRight>
-                <core:Icon id="_IDGenIcon3" src="sap-icon://print" class="size1" color="#FF0000" />
-                <Button id="_IDGenButton9" text="Display" />
-                <Button id="_IDGenButton10" text="Exit" press="onBackPress" />
+                <core:Icon
+                    id="_IDGenIcon33"
+                    src="sap-icon://print"
+                    class="size1"
+                    color="#FF0000"
+                />
+                <Button
+                    id="_IDGenButton19"
+                    text="Display"
+                />
+                <Button
+                    id="_IDGenButton20"
+                    text="Exit"
+                    press="onExit"
+                />
             </contentRight>
         </Bar>
         <Text id="_IDGenText5" text="Event Master Table" class="masterheadings"></Text>
@@ -105,7 +176,7 @@
                 <OverflowToolbar id="_IDGenOverflowToolbar1" design="Auto">
                 <ToolbarSpacer id="_IDGenToolbarSpacer1" />
                 <Button id="_IDGenButton11" text="Save" ></Button>
-                <Button id="_IDGenButton12" text="Cancel"  ></Button>
+                <Button id="_IDGenBton12" text="Cancel"  ></Button>
                 </OverflowToolbar>
             </footer>
         

@@ -15,7 +15,7 @@
                         src="sap-icon://nav-back"
                         class="size1"
                         color="#FFFFFF"
-                        press="onBackPress"
+                        press="backPress"
                     />
                     <core:Icon id="_IDGenIcon2"
                         src="sap-icon://home"
@@ -67,9 +67,7 @@
                 <Button id="_IDGenButton2" text="Copy As" />
                 <Button id="_IDGenButton3" text="Delete" />
                 <Button id="_IDGenButton4" text="Undo Change" />
-                <Button id="_IDGenButton5" text="Select All" />
-                <Button id="_IDGenButton6" text="Select Block" />
-                <Button id="_IDGenButton7" text="Deselect All" />
+                
                 <Button
                     id="button"
                     icon="sap-icon://slim-arrow-down"
@@ -88,7 +86,7 @@
                 <Button id="_IDGenButton8" text="Display" />
                 <Button id="_IDGenButton9"
                     text="Exit"
-                    press="onPressExit"
+                    press="onExit"
                 />
             </contentRight>
         </Bar>

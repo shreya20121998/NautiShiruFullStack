@@ -10,29 +10,67 @@
     <Page id="page">
         <headerContent>
             <!-- Your header content goes here -->
-            <Bar id="_IDGenBar2" class="customHeader">
+            <Bar
+                id="_IDGenBar1"
+                class="customHeader"
+            >
                 <contentLeft>
-                    <Button id="_IDGenButton1" class="customHeaderButton"  icon="sap-icon://nav-back" type="Default" />
-                    <Image id="_IDGenImage1" src="../images/logo.jpg" height="75%" />
-                    <Text id="_IDGenText1" class="textBid" text="Change View User ID and Group Mapping: Overview" />
+                    <core:Icon
+                        id="_IDGenIcon1"
+                        src="sap-icon://nav-back"
+                        class="size1"
+                        color="#FFFFFF"
+                        press="backPress"
+                    />
+                    <core:Icon
+                        id="_IDGenIcon2"
+                        src="sap-icon://home"
+                        class="size1"
+                        color="#FFFFFF"
+                        press="onBackPressHome"
+                    />
+                    <Image
+                        id="_IDGenImage2"
+                        src="../images/ingenxlogo.jpg"
+                        height="75%"
+                    />
+                    <Text
+                        id="_IDGenText1"
+                        class="textBid"
+                        text='Change View User ID and Group Mapping: Overview'
+                    />
                 </contentLeft>
-
                 <contentRight>
-                    <core:Icon id="_IDGenIcon1" src="sap-icon://search" class="size1" color="#FFFFFF">
+                    <core:Icon
+                        id="_IDenIcon3"
+                        src="sap-icon://search"
+                        class="size1"
+                        color="#FFFFFF"
+                    >
                         <core:layoutData>
-                            <FlexItemData id="_IDGenFlexItemData1" growFactor="1" />
+                            <FlexItemData
+                                id="_IDGenFlexItemData1"
+                                growFactor="1"
+                            />
                         </core:layoutData>
                     </core:Icon>
-
-                    <core:Icon id="_IDGenIcon2" src="sap-icon://SAP-icons-TNT/user" class="size1" color="#FFFFFF" >
+                    <core:Icon
+                        id="_IDGenIcon4"
+                        src="sap-icon://SAP-icons-TNT/user"
+                        class="size1"
+                        color="#FFFFFF"
+                    >
                         <core:layoutData>
-                            <FlexItemData id="_IDGenFlexItemData2" growFactor="1"/>
+                            <FlexItemData
+                                id="_IDGenFlexItemData2"
+                                growFactor="1"
+                            />
                         </core:layoutData>
                     </core:Icon>
                 </contentRight>
             </Bar>
         </headerContent>
-        <Bar id="_IDGenBar1" class="_IDGenBar1" >
+        <Bar id="_IenBar1" class="_IDGenBar1" >
             <contentLeft>
                 <Button id="_IDGenButton2" text="New Entries" press="onCreatePress" />
                 <Button id="_IDGenButton3" text="Copy As" />
@@ -46,7 +84,7 @@
             <contentRight>
                 <core:Icon id="_IDGenIcon3" src="sap-icon://print" class="size1" color="#FF0000" />
                 <Button id="_IDGenButton9" text="Display" />
-                <Button id="_IDGenButton10" text="Exit" press="onPressExit" />
+                <Button id="_IDGenButton10" text="Exit" press="onExit" />
             </contentRight>
         </Bar>
         <Text id="_IDGenText01" text="User ID and Group Mapping " class="masterheadings"/>

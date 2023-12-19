@@ -57,7 +57,7 @@
         <Bar
             id="_IDGenBar1"
             class="_IDGenBar1"
-        >
+         >
             <contentLeft>
                 <Button
                     text="New Entries"

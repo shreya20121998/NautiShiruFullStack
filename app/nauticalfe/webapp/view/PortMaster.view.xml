@@ -4,55 +4,53 @@
     xmlns="sap.m" 
     xmlns:core="sap.ui.core">
     <Page id="page">
-        <headerContent>
-            <!-- Your header content goes here -->
-            <Bar
-                id="_IDGenBar2"
-                class="customHeader"
-            >
-                <contentLeft>
-                    
-                    <Image
-                        id="_IDGenImage1"
-                        src="../images/ingenxlogo.jpg"
-                        height="75%"
-                    />
-                    <Text
-                        id="_IDGenText1"
-                        class="textBid"
-                        text="Change View :Master Details for Port: Overview"
-                    />
-                </contentLeft>
-                <contentRight>
-                    <core:Icon
-                        id="_IDGenIcon1"
-                        src="sap-icon://search"
-                        class="size1"
-                        color="#FFFFFF"
-                    >
-                        <core:layoutData>
-                            <FlexItemData
-                                id="_IDGenFlexItemData1"
-                                growFactor="1"
-                            />
-                        </core:layoutData>
-                    </core:Icon>
-                    <core:Icon
-                        id="_IDGenIcon2"
-                        src="sap-icon://SAP-icons-TNT/user"
-                        class="size1"
-                        color="#FFFFFF"
-                    >
-                        <core:layoutData>
-                            <FlexItemData
-                                id="_IDGenFlexItemData2"
-                                growFactor="1"
-                            />
-                        </core:layoutData>
-                    </core:Icon>
-                </contentRight>
-            </Bar>
-        </headerContent>
+         <headerContent>
+              <!-- Your header content goes here -->
+                <Bar class="customHeader">
+                    <contentLeft>
+                        <core:Icon
+                            src="sap-icon://nav-back"
+                            class="size1"
+                            color="#FFFFFF"
+                            press="backPress"
+                        />
+                        <core:Icon
+                            src="sap-icon://home"
+                            class="size1"
+                            color="#FFFFFF"
+                            press="onBackPressHome"
+                        />
+                        <Image
+                            src="../images/ingenxlogo.jpg"
+                            height="75%"
+                        />
+                        <Text
+                            class="textBid"
+                            text="Change View :Master Details for Port: Overview"
+                        />
+                    </contentLeft>
+                    <contentRight>
+                        <core:Icon
+                            src="sap-icon://search"
+                            class="size1"
+                            color="#FFFFFF"
+                        >
+                            <core:layoutData>
+                                <FlexItemData growFactor="1" />
+                            </core:layoutData>
+                        </core:Icon>
+                        <core:Icon
+                            src="sap-icon://SAP-icons-TNT/user"
+                            class="size1"
+                            color="#FFFFFF"
+                        >
+                            <core:layoutData>
+                                <FlexItemData growFactor="1" />
+                            </core:layoutData>
+                        </core:Icon>
+                    </contentRight>
+                    </Bar>
+            </headerContent>
         <Bar
             id="_IDGenBar1"
             class="_IDGenBar1"
@@ -75,18 +73,7 @@
                     id="_IDGenButton5"
                     text="Undo Change"
                 />
-                <Button
-                    id="_IDGenButton6"
-                    text="Select All"
-                />
-                <Button
-                    id="_IDGenButton7"
-                    text="Select Block"
-                />
-                <Button
-                    id="_IDGenButton8"
-                    text="Deselect All"
-                />
+                
                 <Button
                     id="button"
                     icon="sap-icon://slim-arrow-down"
@@ -110,7 +97,7 @@
                 <Button
                     id="_IDGenButton10"
                     text="Exit"
-                    press="onBackPress"
+                    press="onExit"
                 />
             </contentRight>
         </Bar>
