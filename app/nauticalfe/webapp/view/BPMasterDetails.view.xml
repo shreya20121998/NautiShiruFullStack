@@ -52,7 +52,7 @@
         </headerContent>
         <Bar id="_IDGenBar1" class="_IDGenBar1">
             <contentLeft>
-                <Button id="_IDGenButton1" text="Save as Variant"></Button>
+                <Button id="_IDGenButton1" text="Save as Variant" press="onSaveAs"></Button>
                 <Button id="button" icon="sap-icon://slim-arrow-down" iconFirst="false" text="More" ariaHasPopup="Menu" press="onPress"/>
             </contentLeft>
             <contentRight>
@@ -64,7 +64,7 @@
             <Label id="_IDGenLabel1" text="Vendor No:" required="true"></Label>
             <Input id="_IDGenInput1" width="80%" required="true"></Input>
             <Button id="searchBtn" icon="../images/search.png"  class="searchIcon"></Button>
-            <!-- <SearchField id="searchField" width="60%" search=".onFilterPosts" /> -->
+            
         </HBox>
        
         <footer>
