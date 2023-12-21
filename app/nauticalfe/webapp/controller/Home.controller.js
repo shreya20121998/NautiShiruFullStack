@@ -7,14 +7,14 @@ sap.ui.define([
     function (Controller) {
         "use strict";
  
-        return Controller.extend("nauticalfe.controller.View1", {
+        return Controller.extend("nauticalfe.controller.Home", {
             onInit: function () {
  
             },
            
             onPress: function() {
                 const oRouter = this.getOwnerComponent().getRouter();
-                oRouter.navTo("RouteView2");
+                oRouter.navTo("RouteCreateVoyage");
             },
             onPress2: function() {
                 const oRouter = this.getOwnerComponent().getRouter();

@@ -100,24 +100,24 @@
       },
       "routes": [
           {
-              "name": "RouteView1",
+              "name": "RouteHome",
               "pattern": ":?query:",
               "target": [
-                  "TargetView1"
+                  "TargetHome"
               ]
           },
           {
-              "name": "RouteView2",
-              "pattern": "page2",
+              "name": "RouteCreateVoyage",
+              "pattern": "CreateVoyage",
               "target": [
-                  "TargetView2"
+                  "TargetCreateVoyage"
               ]
           },
           {
-              "name": "RouteView3",
-              "pattern": "page3",
+              "name": "RouteFreightSimulator",
+              "pattern": "FreightSimulator",
               "target": [
-                  "TargetView3"
+                  "TargetFreightSimulator"
               ]
           },
           {
@@ -384,26 +384,26 @@
      
       ],
       "targets": {
-          "TargetView1": {
+          "TargetHome": {
               "viewType": "XML",
               "transition": "slide",
               "clearControlAggregation": false,
-              "viewId": "View1",
-              "viewName": "View1"
+              "viewId": "Home",
+              "viewName": "Home"
           },
-          "TargetView2": {
+          "TargetCreateVoyage": {
               "viewType": "XML",
               "transition": "slide",
               "clearControlAggregation": false,
-              "viewId": "View2",
-              "viewName": "View2"
+              "viewId": "CreateVoyage",
+              "viewName": "CreateVoyage"
           },
-          "TargetView3": {
+          "TargetFreightSimulator": {
               "viewType": "XML",
               "transition": "slide",
               "clearControlAggregation": false,
-              "viewId": "View3",
-              "viewName": "View3"
+              "viewId": "FreightSimulator",
+              "viewName": "FreightSimulator"
           },
           "TargetBidCont": {
               "viewType": "XML",
