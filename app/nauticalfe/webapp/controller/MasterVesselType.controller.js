@@ -1,13 +1,12 @@
-
-
 sap.ui.define(
   [
     "sap/ui/core/mvc/Controller",
     "sap/ui/core/routing/History",
-    "sap/ui/core/Fragment"
+    "sap/ui/core/Fragment",
+    "sap/m/MessageToast"
     
   ],
-  function (Controller,History,Fragment ) {
+  function (Controller,History,Fragment,MessageToast ) {
     "use strict";
     
 
@@ -52,6 +51,78 @@ sap.ui.define(
       onExit: function () {
         const oRouter = this.getOwnerComponent().getRouter();
         oRouter.navTo("MastView");
+      },
+      newEntries: function () {
+        this.getView().byId("createTypeTable").setVisible(false)
+        this.getView().byId("entryTypeTable").setVisible(true)
+        this.getView().byId("mainPageFooter").setVisible(true)
+ 
+ 
+      },onSave: function () {
+ 
+        var CARCD =  this.getView().byId("CARCD").getValue();
+        var CARDES =  this.getView().byId("CARDES").getValue();
+ 
+ 
+       
+        var data = {
+ 
+          CARCD: CARCD,
+ 
+          CARDES: CARDES
+ 
+        };
+        console.log(data);
+ 
+ 
+        var that = this;
+        var JsonData = JSON.stringify(data)
+        let EndPoint = "/odata/v4/nautical/CARTYP";
+        fetch(EndPoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JsonData
+        })
+          .then(function (res) {
+           
+            if (res.ok) {
+              console.log("Entity created successfully");
+              MessageToast.show(`Entity created successfully`)
+             
+ 
+            }
+            else {
+              console.log("Failed");
+              MessageToast.show(`Failed`)
+            }
+          })
+          .catch(function (err) {
+            console.log("error", err);
+          })
+          this.getView().byId("createTypeTable").setVisible(true)
+          this.getView().byId("entryTypeTable").setVisible(false)
+          this.getView().byId("mainPageFooter").setVisible(false)
+          that.getView().getModel().refresh();
+         
+         
+         
+ 
+ 
+ 
+ 
+ 
+      },
+      onCancel: function(){
+        this.getView().byId("createTypeTable").setVisible(true);
+        this.getView().byId("entryTypeTable").setVisible(false);
+        this.getView().byId("voyCode").setValue();
+        this.getView().byId("voyCodeDesc").setValue();
+        this.getView().byId("mainPageFooter").setVisible(true)
+ 
+ 
+ 
       }
 
     });

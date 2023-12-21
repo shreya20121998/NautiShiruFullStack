@@ -3,15 +3,13 @@
     background-color: black;
 }
  
-  .layout{
-    margin-top: -7%;
+.layout{
     display: flex;
     justify-content: space-between;
     background-color: white;
     border: 1px solid rgb(238, 234, 234);
     margin-left: 10px;
-   
-  }
+}
   /* for border*/
   #application-nauticalfe-display-component---View2--mainSplitter-content-1{
     background-color: white;
@@ -54,7 +52,7 @@
 }
  
 /*for value help button*/
-#application-nauticalfe-display-component---View2--_IDGenInput2-vhi{
+/* #application-nauticalfe-display-component---View2--_IDGenInput2-vhi{
     color: rgb(245, 131, 131);
 }
 #application-nauticalfe-display-component---View2--_IDGenInput3-vhi{
@@ -65,7 +63,7 @@
 }
 #application-nauticalfe-display-component---View2--_IDGenInput5-vhi{
     color: rgb(245, 131, 131);
-}
+} */
 .sapUiSizeCompact .sapMBtnInner{
     border: 1px solid red;
 }
@@ -547,17 +545,7 @@ Table{
 .mastertables{
     margin-top: 5px ;
 }
- 
-/* .masteroptionsfooter{
-    margin-top: 400px;
-    margin-left: 1150px;
-} */
- 
-/* .masterbuttonsalign{
-    padding: 10px 15px;
-    margin-right: 10px;
-} */
- 
+
 /* file upload dialog box css */
 .MastDialogButtonAlign{
     margin-top: 40px;
@@ -571,7 +559,37 @@ Table{
     background-color: black;
     color: white;
 }
- 
+
+/* save as variant tab */
+
+.sapMCb .sapMLabel {
+    margin-top: -1.5%;
+}
+.LabelInput1{
+    margin-top: 2%;
+    margin-left: 5%;
+}
+.LabelInput2{
+    margin-left: 5%;
+}
+#container-nauticalfe---MastSaveAsVariant--_IDGenColumn3-ah {
+    height: 16px;
+}
+.btnIcon{
+    margin: 5px;
+}
+.tableHeading{
+    font-size: 16px;
+    margin-top: 1%;
+}
+.txtInfoBox{
+    margin: 4%;
+}
+.boldText{
+    font-weight: bold;
+    font-size: 14px;
+}
+
 /* for all icon */
 .sapMBtnIcon {
     color: rgb(194, 65, 65);

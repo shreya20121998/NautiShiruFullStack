@@ -213,6 +213,7 @@
                 <Button
                     id="_IDGenButton22"
                     text="Cancel"
+                    press="onCancel"
                 />
             </OverflowToolbar>
 

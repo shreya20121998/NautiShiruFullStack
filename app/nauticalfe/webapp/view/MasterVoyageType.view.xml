@@ -26,7 +26,7 @@
                         press="onBackPressHome"
                     />
                     <Image
-                        src="../images/ingenxlogo.jpg"
+                        src="./images/ingenxlogo.jpg"
                         height="75%"
                     />
                     <Text
@@ -65,9 +65,9 @@
                     text="New Entries"
                     press="newEntries"
                 />
-                <Button text="Copy As" />
-                <Button text="Delete" />
-                <Button text="Undo Change" />
+                <Button text="Copy As" press="onCopyAs" />
+                <Button text="Edit"  press="pressEdit"/>
+                <Button text="Delete" press="onDeletePress" />
                
                 <Button
                     id="button"
@@ -84,7 +84,7 @@
                     class="size1"
                     color="#FF0000"
                 />
-                <Button text="Display" />
+                <!-- <Button text="Display" /> -->
                 <Button
                     text="Exit"
                     press="onExit"
@@ -103,7 +103,7 @@
             selectionChange="selectedItems"
             width="100%"
             class="mastertables"
-            
+           
         >
             <columns>
                 <Column id="_IDGenColumn1">
@@ -124,14 +124,14 @@
                     <cells>
                      
                         <Text
-                            id="_IDGenInput1"
+                            id="voycd"
                             text="{VOYCD}"
                         />
                         <Text
-                            id="_IDGenInput2"
+                            id="voydesc"
                             text="{VOYDES}"
                         />
-                        
+                       
                     </cells>
                 </ColumnListItem>
             </items>
@@ -156,17 +156,44 @@
             <items>
                 <ColumnListItem>
                     <cells>
-                        <Input id="voyCode" />
+                        <Input id="voyCode"  maxLength="4"/>
                         <Input id="voyCodeDesc" />
                     </cells>
                 </ColumnListItem>
             </items>
         </Table>
+       
+        <Table
+            id="updateTypeTable"
+            updateFinished="onTableUpdateFinished"
+            selectionChange="selectedItems"
+            width="100%"
+            class="mastertables"
+            visible="false"
+           
+        >
+            <columns>
+                <Column>
+                    <Text text="Voyage Code" />
+                </Column>
+                <Column>
+                    <Text text="Voyage Code Description" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text id="voyCode1" text="" />
+                        <Input id="voyCodeDesc1"  editable="true"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
         <!-- <Button id="_IDGenButton2" text="Add Row" press="updateTableRefresh" /> -->
-        
+       
             <!-- footers for both pages are coded differently as save functionality is different in
         both main page and new entries page  -->
-
+ 
             <!-- main page footer -->
             <OverflowToolbar
                 id="mainPageFooter"
@@ -182,14 +209,32 @@
                 <Button
                     id="_IDGenButton22"
                     text="Cancel"
+                    press="onCancel"
                 />
             </OverflowToolbar>
-
+            <OverflowToolbar
+                id="mainPageFooter2"
+                design="Auto"
+                visible="false"
+            >
+                <ToolbarSpacer id="_IDGenToolbarSpacer4" />
+                <Button
+                    id="mainPageSave12"
+                    text="Update"
+                    press="onUpdate"
+                />
+                <Button
+                    id="_IDGenButton23"
+                    text="Cancel"
+                    press="onCancel"
+                />
+            </OverflowToolbar>
+ 
             <!--new entries footer -->
-            
-        
+           
+       
     </Page>
-
+ 
     <!--scrollbar added-->
     <ScrollContainer
         id="_IDGenScrollContainer1"

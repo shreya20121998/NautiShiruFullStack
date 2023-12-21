@@ -10,14 +10,14 @@ namespace NAUTI_MAS;
 //voyage type table
 entity VOYTYP {
    key VOYCD  : String(4)@assert.unique @mandatory @assert.notNull;     //Voyage code
-       VOYDES : String(40); //Voyage Code Description
+       VOYDES : String(40) @mandatory @assert.notNull; //Voyage Code Description
 };
 
 //Cargo Type Master table
 entity CARTYP {
 
    key CARCD  : String(4)@assert.unique @mandatory @assert.notNull;//Vessel Type
-    CARDES : String(40); //Cargo type description
+    CARDES : String(40)@mandatory @assert.notNull; //Cargo type description
 };
 
 //Currency Master Data type table
