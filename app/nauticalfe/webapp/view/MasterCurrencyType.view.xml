@@ -7,6 +7,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns:core="sap.ui.core"
+    
 >
     <Page id="_IDGenPage1">
         <headerContent>
@@ -84,16 +85,17 @@
                 <Button
                     id="_IDGenButton13"
                     text="Copy As"
+                    press="pressCopy"
                 />
                 <Button
                     id="_IDGenButton14"
                     text="Delete"
-                    press="onDeleteVoyageType"
+                    press="onDeletePress"
                 />
                 <Button
                     id="_IDGenButton15"
-                    text="Update"
-                    press="onShowUpdateDialog"
+                    text="Edit"
+                    press="pressEdit"
                 />
                 
                 <Button
@@ -187,17 +189,56 @@
             <items>
                 <ColumnListItem>
                     <cells>
-                        <Input id="NAVOYCUR" value=""/>
+                        <Input id="NAVOYCUR" value="" maxLength="4"/>
                         <Input id="NAVOYGCURDES" value="" />
                     </cells>
                 </ColumnListItem>
             </items>
         </Table>
-        <!-- <Button id="_IDGenButton2" text="Add Row" press="updateTableRefresh" /> -->
-        
-            <!-- footers for both pages are coded differently as save functionality is different in
-        both main page and new entries page  -->
-
+        <Table
+            id="updateTypeTable"
+            updateFinished="onTableUpdateFinished"
+            selectionChange="selectedItems"
+            width="100%"
+            class="mastertables"
+            visible="false"
+           
+        >
+            <columns>
+                <Column>
+                    <Text text="Currency Type" />
+                </Column>
+                <Column>
+                    <Text text=" Currency Description" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text id="NAVOYCUR1" text="" />
+                        <Input id="NAVOYGCURDES1"  editable="true"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <OverflowToolbar
+                id="mainPageFooter2"
+                design="Auto"
+                visible="false"
+            >
+                <ToolbarSpacer id="_IDGenToolbarSpacer4" />
+                <Button
+                    id="mainPageSave12"
+                    text="Update"
+                    press="onUpdate"
+                />
+                <Button
+                    id="_IDGenButton23"
+                    text="Cancel"
+                    press="onCancel"
+                />
+            </OverflowToolbar>
+ 
             <!-- main page footer -->
             <OverflowToolbar
                 id="mainPageFooter"
@@ -213,6 +254,7 @@
                 <Button
                     id="_IDGenButton22"
                     text="Cancel"
+                    press="onCancel"
                 />
             </OverflowToolbar>
 

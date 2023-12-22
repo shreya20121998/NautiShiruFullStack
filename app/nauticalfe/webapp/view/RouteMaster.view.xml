@@ -62,10 +62,8 @@
                 <Button id="_IDGenButton1" text="New Entries" />
                 <Button id="_IDGenButton2" text="Copy As" />
                 <Button id="_IDGenButton3" text="Delete" />
-                <Button id="_IDGenButton4" text="Undo Change" />
-                <Button id="_IDGenButton5" text="Select All" />
-                <Button id="_IDGenButton6" text="Select Block" />
-                <Button id="_IDGenButton7" text="Deselect All" />
+                <Button id="_IDGenButton4" text="Undo" />
+                
                 <Button
                     id="button"
                     icon="sap-icon://slim-arrow-down"

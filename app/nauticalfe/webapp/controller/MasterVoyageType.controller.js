@@ -3,11 +3,12 @@ sap.ui.define(
     "sap/ui/core/mvc/Controller",
     "sap/ui/core/routing/History",
     "sap/ui/core/Fragment",
-    "sap/m/MessageToast"
+    "sap/m/MessageToast",
+    "sap/m/MessageBox"
  
    
   ],
-  function (Controller,History,Fragment,MessageToast ) {
+  function (Controller,History,Fragment,MessageToast, MessageBox ) {
     "use strict";
     let aSelectedIds=[];
  
@@ -33,10 +34,14 @@ sap.ui.define(
         }
       },
       // for more fragment
+ 
       onPress: function () {
+ 
         var oView = this.getView(),
-          oButton = oView.byId("button");
+         oButton = oView.byId("button");
+ 
         if (!this._oMenuFragment) {
+ 
           this._oMenuFragment = Fragment.load({
             name: "nauticalfe.fragments.MastOptionsDropDown",
                         id: oView.getId(),
@@ -46,7 +51,8 @@ sap.ui.define(
             this._oMenuFragment = oMenu;
             return this._oMenuFragment;
           }.bind(this));
-        } else {
+        }
+        else {
           this._oMenuFragment.openBy(oButton);
         }
       },
@@ -76,13 +82,6 @@ sap.ui.define(
             return [oSelectedItem.getBindingContext().getProperty("VOYCD"), oSelectedItem.getBindingContext().getProperty("VOYDES")]
  
           } else {
- 
-          //   let cells = oSelectedItem.getCells();
-          //   console.log(cells);
-          //   rowData.VOYCD = cells[0].getValue(); // Assuming the first cell holds VOYCD
-          //   rowData.VOYDES = cells[1].getValue();
-          //   console.log(rowData);
-          //   return rowData
  
           }
  
@@ -194,7 +193,6 @@ sap.ui.define(
         var value1 =  this.getView().byId("voyCode").getValue();
         var value2 =  this.getView().byId("voyCodeDesc").getValue();
  
-       
         var data = {
  
           VOYCD: value1,
@@ -204,8 +202,7 @@ sap.ui.define(
         };
         console.log(data);
  
- 
-        var that = this;
+        var that = this.getView();
         var JsonData = JSON.stringify(data)
         let EndPoint = "/odata/v4/nautical/VOYTYP";
         fetch(EndPoint, {
@@ -218,16 +215,22 @@ sap.ui.define(
           .then(function (res) {
            
             if (res.ok) {
-              // location.reload();
+             
               console.log("Entry created successfully");
-              MessageToast.show(`Entry created successfully`);
-              that.getView().getModel().refresh();
+              MessageBox.success(`Entry created successfully`);
+              that.getModel().refresh();
+              that.byId("voyCode").setValue("");
+              that.byId("voyCodeDesc").setValue("");
              
  
             }
             else {
-              console.log("Failed");
-              MessageToast.show(`Failed`)
+              res.json().then((data) => {
+                if (data && data.error && data.error.message) {
+                    // Show the error message from the backend
+                    MessageBox.error(data.error.message);
+                }
+                });
             }
           })
           .catch(function (err) {
@@ -236,8 +239,6 @@ sap.ui.define(
           this.getView().byId("createTypeTable").setVisible(true)
           this.getView().byId("entryTypeTable").setVisible(false)
           this.getView().byId("mainPageFooter").setVisible(false)
-          // location.reload()
-          that.getView().getModel().refresh();
  
  
       },
@@ -279,16 +280,45 @@ sap.ui.define(
           );
         });
  
-      }, // ending fn
+        }, // ending fn
       deleteSelectedItems: function (aItems) {
-        aItems.forEach(function (oItem) {
-          oItem.getBindingContext().delete().catch(function (oError) {
-            if (!oError.canceled) {
-              // Error was already reported to message model
-            }
-          });
-        });
+            aItems.forEach(function (oItem) {
+              oItem.getBindingContext().delete().catch(function (oError) {
+                if (!oError.canceled) {
+                  // Error was already reported to message model
+                  MessageToast.show(oError)
+                }
+              });
+            });
+       },
+       pressCopy: function () {
+ 
+        if( aSelectedIds.length){
+          if( aSelectedIds.length > 1){
+             MessageToast.show("Please select one row");
+             return
+          }
+        }else {
+          MessageToast.show("Please select a row");
+          return;
+        }
+ 
+        this.getView().byId("createTypeTable").setVisible(false);
+        let code = aSelectedIds[0][0];
+        let desc = aSelectedIds[0][1];
+        this.getView().byId("voyCode").setValue(code);
+        this.getView().byId("voyCodeDesc").setValue(desc);
+        this.getView().byId('entryTypeTable').setVisible(true);
+ 
+        // console.log(aSelectedIds[0][0], aSelectedIds[0][1]);
+        this.getView().byId("mainPageFooter").setVisible(true);
+ 
+ 
+       
+ 
       }
+   
+ 
  
      
      

@@ -84,18 +84,19 @@
                 <Button
                     id="_IDGenButton13"
                     text="Copy As"
+                    press="pressCopy"
                 />
                 <Button
                     id="_IDGenButton14"
                     text="Delete"
-                    press="onDeleteVoyageType"
+                    press="onDeletePress"
                 />
                 <Button
                     id="_IDGenButton15"
-                    text="Update"
-                    press="onShowUpdateDialog"
+                    text="Edit"
+                    press="pressEdit"
                 />
-                
+               
                 <Button
                     id="button"
                     icon="sap-icon://slim-arrow-down"
@@ -135,19 +136,19 @@
             selectionChange="selectedItems"
             width="100%"
             class="mastertables"
-            
+           
         >
             <columns>
                 <Column id="_IDGenColumn1">
                     <Text
                         id="_IDGenText11"
-                        text="Voyage Code"
+                        text="Vessel Type"
                     />
                 </Column>
                 <Column id="_IDGenColumn2">
                     <Text
                         id="_IDGenText2"
-                        text="Cargo Type Master Table"
+                        text="Vessel Type Description"
                     />
                 </Column>
             </columns>
@@ -163,7 +164,7 @@
                             id="_IDGenInput2"
                             text="{CARDES}"
                         />
-                        
+                       
                     </cells>
                 </ColumnListItem>
             </items>
@@ -181,23 +182,63 @@
                     <Text text="Vessel Type" />
                 </Column>
                 <Column>
-                    <Text text="Cargo Type Description" />
+                    <Text text="Vessel Type Description" />
                 </Column>
             </columns>
             <items>
                 <ColumnListItem>
                     <cells>
-                        <Input id="CARCD" />
+                        <Input id="CARCD"  maxLength="4"/>
                         <Input id="CARDES" />
                     </cells>
                 </ColumnListItem>
             </items>
         </Table>
-        <!-- <Button id="_IDGenButton2" text="Add Row" press="updateTableRefresh" /> -->
-        
-            <!-- footers for both pages are coded differently as save functionality is different in
-        both main page and new entries page  -->
-
+        <Table
+            id="updateTypeTable"
+            updateFinished="onTableUpdateFinished"
+            selectionChange="selectedItems"
+            width="100%"
+            class="mastertables"
+            visible="false"
+           
+        >
+            <columns>
+                <Column>
+                    <Text text="Vessel Type" />
+                </Column>
+                <Column>
+                    <Text text="Vessel Type Description" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text id="CARCD1" text="" />
+                        <Input id="CARDES1"  editable="true"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <OverflowToolbar
+                id="mainPageFooter2"
+                design="Auto"
+                visible="false"
+            >
+                <ToolbarSpacer id="_IDGenToolbarSpacer4" />
+                <Button
+                    id="mainPageSave12"
+                    text="Update"
+                    press="onUpdate"
+                />
+                <Button
+                    id="_IDGenButton23"
+                    text="Cancel"
+                    press="onCancel"
+                />
+            </OverflowToolbar>
+ 
+ 
             <!-- main page footer -->
             <OverflowToolbar
                 id="mainPageFooter"
@@ -216,20 +257,12 @@
                     press="onCancel"
                 />
             </OverflowToolbar>
-
+ 
             <!--new entries footer -->
-            
-        
+           
+       
     </Page>
-
-    <!--scrollbar added-->
-    <ScrollContainer
-        id="_IDGenScrollContainer1"
-        height="100%"
-        width="100%"
-        vertical="true"
-        focusable="true"
-    >
-        <!--this is first page-->
-    </ScrollContainer>
+ 
+   
 </mvc:View>
+ 

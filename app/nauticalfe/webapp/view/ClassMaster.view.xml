@@ -84,16 +84,17 @@
                 <Button
                     id="_IDGenButton13"
                     text="Copy As"
+                    press="pressCopy"
                 />
                 <Button
                     id="_IDGenButton14"
                     text="Delete"
-                    press="onDeleteVoyageType"
+                    press="onDeletePress"
                 />
                 <Button
                     id="_IDGenButton15"
-                    text="Update"
-                    press="onShowUpdateDialog"
+                    text="Edit"
+                    press="pressEdit"
                 />
                 
                 <Button
@@ -124,7 +125,7 @@
             </contentRight>
         </Bar>
         <Label
-            text="Currency Type Master Table "
+            text="Class of Vessel Master "
             class="masterheadings"
         />
         <Table
@@ -187,8 +188,34 @@
             <items>
                 <ColumnListItem>
                     <cells>
-                        <Input id="CLASSFIELD" />
+                        <Input id="CLASSFIELD" maxLength="4"/>
                         <Input id="CLASSDESC"  />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <Table
+            id="updateTypeTable"
+            updateFinished="onTableUpdateFinished"
+            selectionChange="selectedItems"
+            width="100%"
+            class="mastertables"
+            visible="false"
+           
+        >
+            <columns>
+                <Column>
+                    <Text text="Value" />
+                </Column>
+                <Column>
+                    <Text text="Field Description" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Input id="CLASSFIELD1" editable="false"/>
+                        <Input id="CLASSDESC1"  editable="true"/>
                     </cells>
                 </ColumnListItem>
             </items>
@@ -213,10 +240,28 @@
                 <Button
                     id="_IDGenButton22"
                     text="Cancel"
+                    press="onCancel"
+                />
+            </OverflowToolbar>
+             <OverflowToolbar
+                id="mainPageFooter2"
+                design="Auto"
+                visible="false"
+            >
+                <ToolbarSpacer id="_IDGenToolbarSpacer4" />
+                <Button
+                    id="mainPageSave12"
+                    text="Update"
+                    press="onUpdate"
+                />
+                <Button
+                    id="_IDGenButton23"
+                    text="Cancel"
+                    press="onCancel"
                 />
             </OverflowToolbar>
 
-            <!--new entries footer -->
+            
             
         
     </Page>

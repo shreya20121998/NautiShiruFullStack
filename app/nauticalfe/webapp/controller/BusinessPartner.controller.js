@@ -45,4 +45,3 @@ sap.ui.define(
     });
 
   });
-

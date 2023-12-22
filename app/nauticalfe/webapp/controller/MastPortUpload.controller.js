@@ -16,29 +16,6 @@ sap.ui.define([
           onInit: function () {
 
           },
-          //file upload dialog box and it's functions
-          fileupload:function(){
-              var oView = this.getView()
-              if(!this.byId('fileUpload')){
-                  Fragment.load({
-                      name:"nauticalfe.fragments.MastFileUpload",
-                      controller:this,
-                      id:oView.getId()
-                  }).then(function(oDialog){
-                      oDialog.open()
-                  })
-              }
-              else{
-                  this.byId('fileUpload').open()
-              }
-          },
-          exitDialog:function(){
-              var oDialog = this.byId('fileUpload');
-              if (oDialog) {
-                  oDialog.close();
-              }
-          },
-          //file upload dialog box and it's functions implementation ends here
           
           onPress: function () {
             var oView = this.getView(),
@@ -57,17 +34,7 @@ sap.ui.define([
               this._oMenuFragment.openBy(oButton);
             }
           },
-          MastPage:function(){
-            const oHistory = History.getInstance();
-            const sPreviousHash = oHistory.getPreviousHash();
-  
-            if (sPreviousHash !== undefined) {
-              window.history.go(-1);
-            } else {
-              const oRouter = this.getOwnerComponent().getRouter();
-              oRouter.navTo("MastView", {}, true);
-            }
-          },
+         
           onExit: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("MastView");

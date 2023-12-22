@@ -8,68 +8,89 @@
     displayBlock="true"
     xmlns:core="sap.ui.core"
 >
-<Page id="_IDGenPage1">
-    <headerContent>
-        <Bar class="customHeader">
+    <Page id="_IDGenPage1">
+       <headerContent>
+            <!-- Your header content goes here -->
+            <Bar class="customHeader">
+                <contentLeft>
+                    <core:Icon
+                        src="sap-icon://nav-back"
+                        class="size1"
+                        color="#FFFFFF"
+                        press="backPress"
+                    />
+                    <core:Icon
+                        src="sap-icon://home"
+                        class="size1"
+                        color="#FFFFFF"
+                        press="onBackPressHome"
+                    />
+                    <Image
+                        src="./images/ingenxlogo.jpg"
+                        height="75%"
+                    />
+                    <Text
+                        class="textBid"
+                        text='Change View Refrence Voyage Type Search Help: Overview'
+                    />
+                </contentLeft>
+                <contentRight>
+                    <core:Icon
+                        src="sap-icon://search"
+                        class="size1"
+                        color="#FFFFFF"
+                    >
+                        <core:layoutData>
+                            <FlexItemData growFactor="1" />
+                        </core:layoutData>
+                    </core:Icon>
+                    <core:Icon
+                        src="sap-icon://SAP-icons-TNT/user"
+                        class="size1"
+                        color="#FFFFFF"
+                    >
+                        <core:layoutData>
+                            <FlexItemData growFactor="1" />
+                        </core:layoutData>
+                    </core:Icon>
+                </contentRight>
+            </Bar>
+        </headerContent>
+       <Bar
+            id="_IDGenBar1"
+            class="_IDGenBar1"
+         >
             <contentLeft>
-                <core:Icon
-                    src="sap-icon://nav-back"
-                    class="size1"
-                    color="#FFFFFF"
-                    press="backPress"
+                <Button
+                    text="New Entries"
+                    press="newEntries"
                 />
-                <core:Icon
-                    src="sap-icon://home"
-                    class="size1"
-                    color="#FFFFFF"
-                    press="onBackPressHome"
-                />
-                <Image
-                    src="./images/ingenxlogo.jpg"
-                    height="75%"
-                />
-                <Text
-                    class="textBid"
-                    text='Change View Refrence Voyage Type Search Help: Overview'
+                <Button text="Copy As" press="pressCopy"/>
+                <Button text="Edit"  press="pressEdit"/>
+                <Button text="Delete" press="onDeletePress"/>
+               
+                <Button
+                    id="button"
+                    icon="sap-icon://slim-arrow-down"
+                    iconFirst="false"
+                    text="More"
+                    press="onPress"
+                    ariaHasPopup="Menu"
                 />
             </contentLeft>
             <contentRight>
                 <core:Icon
-                    src="sap-icon://search"
+                    src="sap-icon://print"
                     class="size1"
-                    color="#FFFFFF"
-                >
-                    <core:layoutData>
-                        <FlexItemData growFactor="1" />
-                    </core:layoutData>
-                </core:Icon>
-                <core:Icon
-                    src="sap-icon://SAP-icons-TNT/user"
-                    class="size1"
-                    color="#FFFFFF"
-                >
-                    <core:layoutData>
-                        <FlexItemData growFactor="1" />
-                    </core:layoutData>
-                </core:Icon>
+                    color="#FF0000"
+                />
+                <!-- <Button text="Display" /> -->
+                <Button
+                    text="Exit"
+                    press="onExit"
+                />
             </contentRight>
         </Bar>
-    </headerContent>
-    <Bar id="_IDGenBar1">
-        <contentLeft>
-            <Button text="New Entries" press="newEntries" />
-            <Button text="Copy As" press="onCopyAs" />
-            <Button text="Edit"  press="pressEdit"/>
-            <Button text="Delete" press="onDeletePress" />
-            <Button id="button" icon="sap-icon://slim-arrow-down" iconFirst="false" text="More" press="onPress"
-             ariaHasPopup="Menu"/>
-        </contentLeft>
-        <contentRight>
-            <core:Icon src="sap-icon://print" color="#FF0000" />
-            <Button text="Exit" press="onExit" />
-        </contentRight>
-    </Bar>
-    
         <Label
             text="Voyage Type Master Table "
             class="masterheadings"
@@ -80,21 +101,37 @@
             items="{/VOYTYP}"
             updateFinished="onTableUpdateFinished"
             selectionChange="selectedItems"
-            width="95%"
-            class="table">
+            width="100%"
+            class="mastertables"
+           
+        >
             <columns>
                 <Column id="_IDGenColumn1">
-                    <Text id="_IDGenText11" text="Voyage Code" />
+                    <Text
+                        id="_IDGenText11"
+                        text="Voyage Code"
+                    />
                 </Column>
                 <Column id="_IDGenColumn2">
-                    <Text id="_IDGenText2" text="Voyage Code Description" />
+                    <Text
+                        id="_IDGenText2"
+                        text="Voyage Code Description"
+                    />
                 </Column>
             </columns>
             <items>
                 <ColumnListItem id="_IDGenColumnListItem1">
                     <cells>
-                        <Text id="voycd" text="{VOYCD}" />
-                        <Text id="voydesc" text="{VOYDES}" /> 
+                     
+                        <Text
+                            id="_IDGenInput1"
+                            text="{VOYCD}"
+                        />
+                        <Text
+                            id="_IDGenInput2"
+                            text="{VOYDES}"
+                        />
+                       
                     </cells>
                 </ColumnListItem>
             </items>
@@ -104,7 +141,7 @@
             updateFinished="onTableUpdateFinished"
             selectionChange="selectedItems"
             width="100%"
-            class="table"
+            class="mastertables"
             visible="false"
             mode="MultiSelect"
         >
@@ -130,8 +167,8 @@
             id="updateTypeTable"
             updateFinished="onTableUpdateFinished"
             selectionChange="selectedItems"
-            width="95%"
-            class="table"
+            width="100%"
+            class="mastertables"
             visible="false"
            
         >
@@ -152,21 +189,35 @@
                 </ColumnListItem>
             </items>
         </Table>
-
+        <!-- <Button id="_IDGenButton2" text="Add Row" press="updateTableRefresh" /> -->
+       
+            <!-- footers for both pages are coded differently as save functionality is different in
+        both main page and new entries page  -->
  
             <!-- main page footer -->
-            <footer>
-                <Bar  id="mainPageFooter">
-                    <contentRight>
-                        <Button id="mainPageSave" text="Save" type="Ghost" press="onSave" />
-                        <Button id="_IDGenButton22" text="Cancel" type="Ghost" press="onCancel" />
-                    </contentRight>
-                </Bar>
-            </footer>
-            
-                
-           
-            <OverflowToolbar id="mainPageFooter2" design="Auto" visible="false" >
+            <OverflowToolbar
+                id="mainPageFooter"
+                design="Auto"
+                visible="false"
+            >
+                <ToolbarSpacer id="_IDGenToolbarSpacer3" />
+                <Button
+                    id="mainPageSave"
+                    text="Save"
+                    press="onSave"
+                />
+                <Button
+                    id="_IDGenButton22"
+                    text="Cancel"
+                    press="onCancel"
+                />
+            </OverflowToolbar>
+ 
+            <OverflowToolbar
+                id="mainPageFooter2"
+                design="Auto"
+                visible="false"
+            >
                 <ToolbarSpacer id="_IDGenToolbarSpacer4" />
                 <Button
                     id="mainPageSave12"
@@ -180,10 +231,11 @@
                 />
             </OverflowToolbar>
  
-          
+            <!--new entries footer -->
            
        
     </Page>
  
-  
+   
+   
 </mvc:View>

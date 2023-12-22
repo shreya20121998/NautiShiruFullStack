@@ -1,96 +1,74 @@
-<mvc:View controllerName="nauticalfe.controller.EventMaster"
-    xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+<mvc:View
+    xmlns:tnt="sap.tnt"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    controllerName="nauticalfe.controller.EventMaster"
     xmlns="sap.m"
-    xmlns:core="sap.ui.core">
-    <Page id="page">
-        <headerContent>
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:core="sap.ui.core"
+>
+    <Page id="_IDGenPage1">
+       <headerContent>
             <!-- Your header content goes here -->
-            <Bar
-                id="_IDGenBar1"
-                class="customHeader"
-            >
+            <Bar class="customHeader">
                 <contentLeft>
                     <core:Icon
-                        id="_IDGenIcon1"
                         src="sap-icon://nav-back"
                         class="size1"
                         color="#FFFFFF"
                         press="backPress"
                     />
                     <core:Icon
-                        id="_IDGenIcon2"
                         src="sap-icon://home"
                         class="size1"
                         color="#FFFFFF"
                         press="onBackPressHome"
                     />
                     <Image
-                        id="_IDGenImage2"
-                        src="../images/ingenxlogo.jpg"
+                        src="./images/ingenxlogo.jpg"
                         height="75%"
                     />
                     <Text
-                        id="_IDGenText1"
                         class="textBid"
-                        text='Change View Event Master Table: Overview'
+                        text='Display View Event Master Table: Overview'
                     />
                 </contentLeft>
                 <contentRight>
                     <core:Icon
-                        id="_IDGIcon3"
                         src="sap-icon://search"
                         class="size1"
                         color="#FFFFFF"
                     >
                         <core:layoutData>
-                            <FlexItemData
-                                id="_IDGenFlexItemData1"
-                                growFactor="1"
-                            />
+                            <FlexItemData growFactor="1" />
                         </core:layoutData>
                     </core:Icon>
                     <core:Icon
-                        id="_IDGenIcon4"
-                        src="sap-icon://person-placeholder"
+                        src="sap-icon://SAP-icons-TNT/user"
                         class="size1"
                         color="#FFFFFF"
                     >
                         <core:layoutData>
-                            <FlexItemData
-                                id="_IDGenFlexItemData2"
-                                growFactor="1"
-                            />
+                            <FlexItemData growFactor="1" />
                         </core:layoutData>
                     </core:Icon>
                 </contentRight>
             </Bar>
         </headerContent>
-        <Bar
-            id="_IDGenBar12"
+       <Bar
+            id="_IDGenBar1"
             class="_IDGenBar1"
          >
             <contentLeft>
                 <Button
-                    id="_IDGenButton12"
                     text="New Entries"
                     press="newEntries"
                 />
-                <Button
-                    id="_IDGenButton13"
-                    text="Copy As"
-                />
-                <Button
-                    id="_IDGenButton14"
-                    text="Delete"
-                    press="onDeleteVoyageType"
-                />
-                <Button
-                    id="_IDGenButton15"
-                    text="Update"
-                    press="onShowUpdateDialog"
-                />
-                
+                <Button text="Copy As" press="pressCopy"/>
+                <Button text="Edit"  press="pressEdit"/>
+                <Button text="Delete" press="onDeletePress"/>
+               
                 <Button
                     id="button"
                     icon="sap-icon://slim-arrow-down"
@@ -102,83 +80,154 @@
             </contentLeft>
             <contentRight>
                 <core:Icon
-                    id="_IDGenIcon33"
                     src="sap-icon://print"
                     class="size1"
                     color="#FF0000"
                 />
+                <!-- <Button text="Display" /> -->
                 <Button
-                    id="_IDGenButton19"
-                    text="Display"
-                />
-                <Button
-                    id="_IDGenButton20"
                     text="Exit"
                     press="onExit"
                 />
             </contentRight>
         </Bar>
-        <Text id="_IDGenText5" text="Event Master Table" class="masterheadings"></Text>
-        <Table width="100%" class="mastertables" visible="true" mode="MultiSelect"
-            id="firstTableId">
+        <Label
+            text="Event Master Table "
+            class="masterheadings"
+        />
+        <Table
+            id="createTypeTable"
+            mode="MultiSelect"
+            items="{/EVENT_MAS}"
+            updateFinished="onTableUpdateFinished"
+            selectionChange="selectedItems"
+            width="100%"
+            class="mastertables"
+           
+        >
             <columns>
-                <!-- <Column id="_IDGenColumn1" width="30px">
-                    <Label id="_IDGenLabel1" text="" />
-                </Column> -->
-                <Column id="_IDGenColumn2" width="10%">
-                    <Label id="_IDGenLabel2" text="Event Type" />
+                <Column id="_IDGenColumn1">
+                    <Text
+                        id="_IDGenText11"
+                        text="Event Code"
+                    />
                 </Column>
-                <Column id="_IDGenColumn3" width="15%">
-                    <Label id="_IDGenLabel3" text="Event Text" />
-                </Column>
-                <Column id="_IDGenColumn4">
-                    <Label id="_IDGenLabel4" text="" />
+                <Column id="_IDGenColumn2">
+                    <Text
+                        id="_IDGenText2"
+                        text="Event Code Description"
+                    />
                 </Column>
             </columns>
-            <ColumnListItem id="_IDClmnListItem1">
-                <cells>
-                    <Text id="_IDGenTxt2" text="{}"></Text>
-                    <Text id="_IDGenTxt3" text="{}"></Text>
-                    <Text id="_IDGenTxt4" text="{}"></Text>
-                </cells>
-            </ColumnListItem>
-            <ColumnListItem id="_IDGenClmnListItem1">
-                <cells>
-                    <Text id="_IDText2" text="{}"></Text>
-                    <Text id="_IDText3" text="{}"></Text>
-                    <Text id="_IDText4" text="{}"></Text>
-                </cells>
-            </ColumnListItem>
-            <ColumnListItem id="_IDGenColmnListItem1">
-                <cells>
-                    <Text id="_IDTxt2" text="{}"></Text>
-                    <Text id="_IDTxt3" text="{}"></Text>
-                    <Text id="_IDTxt4" text="{}"></Text>
-                </cells>
-            </ColumnListItem>
-            <ColumnListItem id="_IDGenColumnListItem1">
-                <cells>
-                    <Text id="IDTxt0" text="{}"></Text>
-                    <Text id="IDGenText3" text="{}"></Text>
-                    <Text id="IDGenText4" text="{}"></Text>
-                </cells>
-            </ColumnListItem>
-            <ColumnListItem id="_IDColumnListItem1">
-                <cells>
-                    <Text id="_IDGenText2" text="{}"></Text>
-                    <Text id="_IDGenText3" text="{}"></Text>
-                    <Text id="_IDGenText4" text="{}"></Text>
-                </cells>
-            </ColumnListItem>
+            <items>
+                <ColumnListItem id="_IDGenColumnListItem1">
+                    <cells>
+                     
+                        <Text
+                            id="_IDGenInput1"
+                            text="{EVTTY}"
+                        />
+                        <Text
+                            id="_IDGenInput2"
+                            text="{TEXT}"
+                        />
+                       
+                    </cells>
+                </ColumnListItem>
+            </items>
         </Table>
+        <Table
+            id="entryTypeTable"
+            updateFinished="onTableUpdateFinished"
+            selectionChange="selectedItems"
+            width="100%"
+            class="mastertables"
+            visible="false"
+            mode="MultiSelect"
+        >
+            <columns>
+                <Column>
+                    <Text text="Event Code" />
+                </Column>
+                <Column>
+                    <Text text="Event Code Description" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Input id="eventCode"  maxLength="4"/>
+                        <Input id="eventCodeDesc" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+       
+        <Table
+            id="updateTypeTable"
+            updateFinished="onTableUpdateFinished"
+            selectionChange="selectedItems"
+            width="100%"
+            class="mastertables"
+            visible="false"
+           
+        >
+            <columns>
+                <Column>
+                    <Text text="Cost Code" />
+                </Column>
+                <Column>
+                    <Text text="Cost Code Description" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text id="eventCode1" text="" />
+                        <Input id="eventCodeDesc1"  editable="true"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+       
+            <OverflowToolbar
+                id="mainPageFooter"
+                design="Auto"
+                visible="false"
+            >
+                <ToolbarSpacer id="_IDGenToolbarSpacer3" />
+                <Button
+                    id="mainPageSave"
+                    text="Save"
+                    press="onSave"
+                />
+                <Button
+                    id="_IDGenButton22"
+                    text="Cancel"
+                    press="onCancel"
+                />
+            </OverflowToolbar>
 
-        <footer>
-                <OverflowToolbar id="_IDGenOverflowToolbar1" design="Auto">
-                <ToolbarSpacer id="_IDGenToolbarSpacer1" />
-                <Button id="_IDGenButton11" text="Save" ></Button>
-                <Button id="_IDGenBton12" text="Cancel"  ></Button>
-                </OverflowToolbar>
-            </footer>
-        
+            <OverflowToolbar
+                id="mainPageFooter2"
+                design="Auto"
+                visible="false"
+            >
+                <ToolbarSpacer id="_IDGenToolbarSpacer4" />
+                <Button
+                    id="mainPageSave12"
+                    text="Update"
+                    press="onUpdate"
+                />
+                <Button
+                    id="_IDGenButton23"
+                    text="Cancel"
+                    press="onCancel"
+                />
+            </OverflowToolbar>
+ 
+            <!--new entries footer -->
+           
+       
     </Page>
 </mvc:View>

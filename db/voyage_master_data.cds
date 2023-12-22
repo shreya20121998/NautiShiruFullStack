@@ -58,11 +58,11 @@ entity MAS_BID {
 //Port Master Code table
 entity ZPORT {
 
-    ZF_VALUE : String(50); //Type of currency
+   key ZF_VALUE : String(50); //Type of currency
 
     ZF_DESC  : String(50); // field description
 
-    Key COUNTRY  : Country; //country
+     COUNTRY  : Country; //country
 
     COUNTRYN : Country; //country
 

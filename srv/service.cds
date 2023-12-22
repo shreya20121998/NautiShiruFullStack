@@ -37,5 +37,6 @@ service Nautical{
     entity VEND_BIDH as projection on submit_quotation.VEND_BIDH;
     entity VEND_BID as projection on submit_quotation.VEND_BID;
     entity BID_SCORE as projection on compare_quotation.BID_SCORE;
-    entity VEND_FBID as projection on compare_quotation.VEND_FBID;      
+    entity VEND_FBID as projection on compare_quotation.VEND_FBID; 
+    entity ZPORT as projection on NAUTI_MAS.ZPORT;    
 }
