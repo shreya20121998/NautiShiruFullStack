@@ -5,76 +5,73 @@ controllerName="nauticalfe.controller.dash"
 xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
     
 
-    <Page id="_IDGenPage1"  >
-     <headerContent>
-            <!-- Your header content goes here -->
-            <Bar id="_IDGenBar1" class="customHeader">
-                <contentLeft>
-                    <core:Icon id="_IDGenIcon1"
-                        src="sap-icon://nav-back"
-                        class="size1"
-                        color="#FFFFFF"
-                        press="onBackPress"
-                    />
-                    <core:Icon id="_IDGenIcon2"
-                        src="sap-icon://home"
-                        class="size1"
-                        color="#FFFFFF"
-                        press="onBackPressHome"
-                    />
-                    <Image id="_IDGenImage2"
-                        src="../images/ingenxlogo.jpg"
-                        height="75%"
-                    />
-                    <Text id="_IDGenText1"
-                        class="textBid"
-                        text="Nautical Dashboard"
-                    />
-                </contentLeft>
-                <contentRight>
-                    <core:Icon id="_IDGenIcon3"
-                        src="sap-icon://search"
-                        class="size1"
-                        color="#FFFFFF"
-                    >
-                        <core:layoutData>
-                            <FlexItemData id="_IDGenFlexItemData1" growFactor="1" />
-                        </core:layoutData>
-                    </core:Icon>
-                    <core:Icon id="_IDGenIcon4"
-                        src="sap-icon://SAP-icons-TNT/user"
-                        class="size1"
-                        color="#FFFFFF"
-                    >
-                        <core:layoutData>
-                            <FlexItemData id="_IDGenFlexItemData2" growFactor="1" />
-                        </core:layoutData>
-                    </core:Icon>
-                </contentRight>
-            </Bar>
-        </headerContent>
+<Page id="_IDGenPage1" class="page">
+    <headerContent>
+      <Bar class="customHeader">
+          <contentLeft>
+              <core:Icon
+                  src="sap-icon://nav-back"
+                  class="size1"
+                  color="#FFFFFF"
+                  press="onBackPress"
+              />
+              
+              
+              <Image
+                  src="./images/ignxlogo.png"
+                  height="75%" activeSrc="https://www.ingenxtec.com"
+                  
+              />
+        
+              
+              <Text
+                  class="textBid"
+                  text="Nautical Dashboard"
+              />
+          </contentLeft>
+          <contentRight>
+              <core:Icon
+                  src="sap-icon://search"
+                  class="size1"
+                  color="#FFFFFF"
+              >
+                  <core:layoutData>
+                      <FlexItemData growFactor="1" />
+                  </core:layoutData>
+              </core:Icon>
+              <core:Icon
+                  src="sap-icon://SAP-icons-TNT/user"
+                  class="size1"
+                  color="#FFFFFF"
+              >
+                  <core:layoutData>
+                      <FlexItemData growFactor="1" />
+                  </core:layoutData>
+              </core:Icon>
+          </contentRight>
+      </Bar>
+    </headerContent>
     
     <VBox id="_IDGenVBox1" class="vPanel">
-        <Panel id="_IDGenPanel1" class="panel" width="700px" height="auto">
-            
-            <ObjectListItem id="_IDGenObjectListItem1" intro="Select Transaction Type" ></ObjectListItem>
+        <Panel id="_IDGenPanel1" class="dashboardPanel" width="600px" height="500px">
+            <ObjectListItem id="_IDGenObjectListItem1" intro="Select Transaction Type" class="headerTxt" ></ObjectListItem>
 
-            <Button id="_IDGenButton1" text="Transaction Data" type="Reject" press="TransData" class="Trans"  width="30%" icon="sap-icon://request"></Button>
+            <Button id="_IDGenButton1" text="Transaction Data" press="TransData" type="Reject"  class="dashboardBtn"
+                width="52%" icon="sap-icon://request"></Button>
 
-            <Button id="_IDGenButton2" text="Master Data" press="MastData" type="Reject" class="Mastr" width="30%" icon="sap-icon://visits"></Button>
+            <Button id="_IDGenButton2" text="Master Data" press="MastData" type="Reject" class="dashboardBtn"
+                width="52%" icon="sap-icon://visits"></Button>
+                
         </Panel>   
 
         <Panel id="_IDGenPanel2"  >
-            <Image id="_IDGenImage1"  class="mastrimg" src="../images/nautical.png" width="400px" height="auto"   ></Image>
+            <Image id="_IDGenImage1"  class="nauticalimg" src="./images/nautical.png" width="400px" height="auto"   ></Image>
         </Panel> 
     </VBox>
 
     <footer>
         <OverflowToolbar id="_IDGenOverflowToolbar1" ></OverflowToolbar>
     </footer>
-   </Page>
+</Page>
 
-   
-    
-
-   </mvc:View> 
+</mvc:View> 
