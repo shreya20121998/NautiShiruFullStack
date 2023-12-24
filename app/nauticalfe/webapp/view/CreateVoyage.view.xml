@@ -54,13 +54,13 @@ xmlns:form="sap.ui.layout.form"
               <Label id="_IDLabel1" text="voyage Name"/>
               <Input id="_IDInput1" value="" />
               <Label id="_IDLabel2" text="Voyage Type"/>
-              <Input id="_IDInput2" value="" showValueHelp="true" valueHelpRequest="onValueHelpPressVoyageType" />
+              <Input id="_IDInput2" value="" showValueHelp="true" valueHelpRequest="showValueHelpDialog1" />
               <Label id="_IDLabel3" text="bidding Type"/>
-              <Input id="_IDInput3" value="" showValueHelp="true"/>
-              <Label id="_IDLabel4" text="Cargo Type"/>
-              <Input id="_IDInput4" value="" showValueHelp="true"/>
+              <Input id="_IDInput3" value="" showValueHelp="true" valueHelpRequest="showValueHelpDialog2"/>
+              <Label id="_IDLabel4" text="Cargo Type" />
+              <Input id="_IDInput4" value="" showValueHelp="true" valueHelpRequest="showValueHelpDialog3"/>
               <Label id="_IDLabel5" text="currency"/>
-              <Input id="_IDInput5" value="" showValueHelp="true"  />
+              <Input id="_IDInput5" value="" showValueHelp="true" valueHelpRequest="showValueHelpDialog4" />
               <!-- Add more form elements as needed -->
           </form:SimpleForm>
         </FlexBox>
