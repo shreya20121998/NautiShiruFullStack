@@ -85,6 +85,40 @@ sap.ui.define([
         const oRouter = this.getOwnerComponent().getRouter();
         oRouter.navTo("RouteSaveAsVariant");
       },
+      fileupload:function(){
+
+        var oView = this.getView()
+        if(!this.byId('fileUpload')){
+
+            Fragment.load({
+                name:"nauticalfe.fragments.MastFileUpload",
+                controller:this,
+                id:oView.getId()
+            }).then(function(oDialog){
+                oDialog.open()
+            })
+        }
+        else{
+            this.byId('fileUpload').open()
+        }
+    },
+    exitDialog:function(){
+        var oDialog = this.byId('fileUpload');
+        if (oDialog) {
+            oDialog.close();
+        }
+    },
+    onFileSelect:function(oEvent){
+      var oFileUploader = oEvent.getSource();
+      var sFileName = oFileUploader.getValue();
+      console.log(sFileName)
+
+      // Set the file name to the Input field
+      var oFileNameInput = this.byId("fileName");
+      oFileNameInput.setValue(sFileName);
+
+      this.exitDialog();
+    }
 
       });
 });

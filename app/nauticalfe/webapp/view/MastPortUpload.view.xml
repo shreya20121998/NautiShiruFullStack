@@ -67,7 +67,7 @@
             <HBox id="_IDGenHBox1" alignItems="Center" class="masterFileUpload">
                 <Label id="_IDGenLabel1" text="File Name:"></Label>
                 <Input id="_IDGenInput1" width="450px"  ></Input>
-                <Button id="_IDGenButton3" icon="sap-icon://value-help" press="fileupload"></Button>
+                <Button id="_IDGenButton3" icon="sap-icon://value-help" press=".fileupload"></Button>
             </HBox>
  
            
