@@ -1,5 +1,5 @@
 .page{
-    background-color: rgba(245, 245, 245, 0.898);
+    background-color: rgba(247, 243, 243, 0.898);
 }
 .pageFooter{
     border: 1px solid rgb(194, 193, 193);
@@ -7,15 +7,14 @@
 .sapMBtnContent{
     color: rgb(195, 68, 68);;
 }
+.sapMLIBShowSeparator>td{
+    border: 1px solid rgb(214, 211, 211);
+ }
 /************************************ For Home Screen **********************************************/
 .tileLayout{
     border-radius: 0%;
 }
 /************************************* For Create Voyage Screen *************************************/
-
-.crthreebox{
-    line-height: 1.5%;
-}
 .threeFlex{
     margin: 0.5%;
     border: 1px solid rgb(204, 202, 202);
@@ -140,203 +139,66 @@
     position: fixed;
 }
 
-/*********************************Voyage Type Screen ********************************************/
-.table{
-    margin-left: 1%;
-}
-
-/************************************** Transaction data  **************************************/
-.voy,.right,.FS {
-    margin: 5%;
-}
-/* for voyage option page */
- 
-.buttonSpacing{
-    margin-bottom: 2%;
-    height: 5px;
-    margin-left: 25px;
-}
-.buttonhead{
+/************************************** Transaction data Dashboard  **************************************/
+.two{
+    width: 35%;
+    margin-left: 10%;
     margin-top: 8%;
 }
- 
- 
-/*for Createvoyage plan */
- 
+/*************************************Transaction Capture Voyage Plan Screen***********************************/
 .animation{
     display: none;
 }
- 
-
-#application-nauticalfe-display-component---TrCreateVoyagePlan--Select1-labelText{
-    line-height: 1.500rem;
-    color: rgb(172, 52, 52);  
-}
-.vdetailsHeading{
-    margin-left: 17%;
-    margin-top: -60px;
-}
-/* .headersec{
-    display: flex;
-    justify-content: space-between;
-    padding-left: 2%;
-} */
- 
+/* Vessel Details */
 .vgheading{
     margin: 10px;
     padding: 5px;
     border-bottom: 1px solid rgb(180, 179, 179);
     width: 100%;
 }
-.vdHeadingLayout{
-    justify-content: space-between;
-    margin-left: 3.5rem;
-}
-.sapMLabel {
-    padding: 5px;
-}
-.planInfoHeading{
-    border-bottom: 1px solid rgb(202, 199, 199);
-    width: 100%;
-}
- 
- 
- 
-/* for createvoyageplan page */
-.vhead{
-    margin-top: 5%;
-}
-.Hhead{
-    margin-top: 3%;
-}
- 
- 
- 
-/* for Createvoyageplan  vessel plan table  */
- 
- 
- 
- 
-heading{
-    margin-top: 80px;
-    margin-left: 20px;
-    font-size: 15px;
-   
-}
- 
- 
-/* bid detail section */
-.sapMListHdrText {
-background-color: #f5f6f7;
-font-size: small;
-}
-.sapUiSizeCompact .sapMListTblSelCol, .sapUiSizeCompact .sapMListTblSelCol>.sapMLIBSelectM, .sapUiSizeCompact .sapMListTblSelCol>.sapMLIBSelectS, .sapUiSizeCompact .sapMListTblHasNav .sapMListTblNavCol {
-    width: 2rem;
-    background: rgb(240, 235, 235); ;
-}
- 
- 
-.second_table{
-    margin-left: 25% !important;
-}
- 
-/* FOR LONG TEXT */
- 
-.sapMInputBase.sapMTextArea .sapMTextAreaInner {
-    line-height: 10;
-    background-color: white;
-}
- 
-/* Footer part of create voyage plan page */
-.footerpagebuttons{
-    margin-bottom: 2%;
-    height: 5px;
-    margin-left: 20px;
-}
-.footercostplanbutton{
-    margin-left: 30px;
-    margin-top: 10px;
-}
- 
-.footeractualplanbutton{
-    margin-left: 20px;
-    margin-top: 10px;
-}
- 
-.costplantables{
-    margin-left: 20px;
-    margin-top: 20px;
-}
- 
-.footerheading{
-    margin-top: 60px;
-    margin-left: 20px;
-    font-size: 15px;
-    font-weight: bold;
-}
- 
- 
- 
- 
-/* voyage change screen */
- 
 .vdHeaderLayout{
     margin-left: 5rem;
     margin-bottom: 3rem;
     justify-content: space-between;
 }
-/* .navContainer2{
-    margin-left: 3rem;
-    width: 100%;
-} */
-.navigationPanel{
-    margin-left: 3rem;
+
+.table{
+    margin-left: 9%;
+    border: 1px solid rgb(221, 217, 217);
 }
-.vdheading{
-    border-bottom: 1px solid rgb(204, 201, 201);
-    width: 100%;
-    padding: 0.5rem;
-}
+
 .vdsection{
    margin-left: 8rem;
 }
 .vdsection2{
     margin-left: 7.4rem;
 }
-.rdheading{
-    margin-top: 2rem;
+.voyagePanel{
+    background-color: white;
+    margin: 1%;
 }
-.vesselRefDetails{
-    border: 1px solid grey;
-}
+
 /* vessel Plan section  */
  
-/* .vsplandetails{
-    margin-left: 6rem;
-} */
-/* .infoinputs{
-    margin: 0 20px;
-} */
-/* .referenceTable{
-    border: 1px solid rgb(205, 201, 201);
-} */
 .vsplandetails{
     margin-left: 3rem;
-    /* width: 150% !important; */
 }
 .infoinputs{
     margin-left: 2rem;
 }
-/* Table{
-    border: 1px solid grey !important;
-} */
- .sapMLIBShowSeparator>td{
-    border: 1px solid rgb(214, 211, 211);
- }
+
+/* Bid Details */
+
+.flexbidtable{
+    padding-right: 5%;
+    padding-bottom: 2%;
+}
+.flexbtn{
+    margin-left: 4.2%;
+}
  
  
- 
-/* Business Partner Details Page */
+/***************************************** Business Partner Details Page ************************************/
  
 .EnterDetailsHeader{
     margin: 2%;
@@ -351,7 +213,7 @@ font-size: small;
     margin-left: 70rem;
     margin-top: 22rem;
 }
-/* config release strategy */
+/****************************************** config release strategy *****************************************/
  
 .configHeading{
     margin-top: 2%;
@@ -364,16 +226,7 @@ font-size: small;
     margin-top: 1%;
 }
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
 /*
 /* Master data pages css by anurag */
  

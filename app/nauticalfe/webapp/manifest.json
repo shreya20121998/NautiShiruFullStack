@@ -379,7 +379,14 @@
         "target": [
             "TargetSaveAsVariant"
         ]
-    }
+      },
+      {
+        "name": "RouteTrCaptureVoyageActual",
+        "pattern": "TrCaptureVoyageActual",
+        "target": [
+            "TargetTrCaptureVoyageActual"
+        ]
+      }
 
      
       ],
@@ -660,7 +667,14 @@
         "clearControlAggregation": false,
         "viewId": "MastSaveAsVariant",
         "viewName": "MastSaveAsVariant"
-    }
+        },
+        "TargetTrCaptureVoyageActual": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrCaptureVoyageActual",
+            "viewName": "TrCaptureVoyageActual"
+            }
 
 
        
