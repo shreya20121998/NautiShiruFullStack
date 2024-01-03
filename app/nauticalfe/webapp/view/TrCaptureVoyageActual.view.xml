@@ -569,7 +569,7 @@
                                 <ColumnListItem id="_IDGenCmnLstItem3">
                                     <cells>
                                         <Text id="_IDT11" text="LAST PORT OF CALL" />
-                                        <CheckBox id="chbox"></CheckBox>
+                                        <CheckBox id="chbox1"></CheckBox>
                                         <Input id="_IDt12" value=""/>
                                     </cells>
                                 </ColumnListItem>
@@ -652,9 +652,9 @@
                     <Label text="Long Text"></Label>
                     <TextArea id="TextArea1" value="" width="100%" height="300px"> </TextArea>               
 			</Panel>
-            <Panel id="p5" class="voyagePanel" >
-				     
-                    <l:VerticalLayout id="_IDGenVerticalLayout1">
+            <Panel id="p5" class="voyagePanel" > 
+              
+                <l:VerticalLayout id="_IDGenVerticalLayout1">
                   <u:FileUploader
                     id="fileUploader"
                     name="myFileUpload"
@@ -663,9 +663,8 @@
                     uploadComplete="handleUploadComplete"
                     buttonText="Choose File"
                     icon="sap-icon://value-help"/>
-                  
-                </l:VerticalLayout>
-                                 
+                </l:VerticalLayout>   
+                           
 			</Panel>
 
         </NavContainer>
