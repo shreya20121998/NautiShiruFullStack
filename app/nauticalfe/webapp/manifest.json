@@ -176,13 +176,7 @@
                   "TargetTrCaptureVoyage"
               ]
           },
-          {
-              "name": "TrCaptureVoyagePlan",
-              "pattern": "cvoy",
-              "target": [
-                  "TargetTrCaptureVoyagePlan"
-              ]
-          },
+          
          
          {
               "name": "RoutePortLocMaster",
@@ -386,6 +380,69 @@
         "target": [
             "TargetTrCaptureVoyageActual"
         ]
+      },
+      {
+        "name": "RouteTrCaptureVoyagePlan",
+        "pattern": "TrCaptureVoyagePlan",
+        "target": [
+            "TargetTrCaptureVoyagePlan"
+        ]
+      },
+      {
+        "name": "RouteTrCreateChartering",
+        "pattern": "TrCreateChartering",
+        "target": [
+            "TargetTrCreateChartering"
+        ]
+      },
+      {
+        "name": "RouteTrVoyageApproval",
+        "pattern": "TrVoyageApproval",
+        "target": [
+            "TargetTrVoyageApproval"
+        ]
+      },
+      {
+        "name": "RouteTrRequestQuotation",
+        "pattern": "RequestQuotation",
+        "target": [
+            "TargetTrRequestQuotation"
+        ]
+      },
+      {
+        "name": "RouteTrCompareRequestQuotation",
+        "pattern": "CompareRequestQuotation",
+        "target": [
+            "TargetTrCompareRequestQuotation"
+        ]
+      },
+      {
+        "name": "RouteTrInviteLiveFrieghtNego",
+        "pattern": "InviteLiveFrieghtNego",
+        "target": [
+            "TargetTrInviteLiveFrieghtNego"
+        ]
+      },
+      {
+        "name": "RouteTrCompareLiveFrieghtReport",
+        "pattern": "CompareLiveFrieghtReport",
+        "target": [
+            "TargetTrCompareLiveFrieghtReport"
+        ]
+      },
+      {
+        "name": "RouteTrContractAwardStatusReport",
+        "pattern": "TrContractAwardStatusReport",
+        "target": [
+            "TargetTrContractAwardStatusReport"
+        ]
+      },
+      {
+        "name": "RouteTrBiddingHistoryReport",
+        "pattern": "TrBiddingHistoryReport",
+        "target": [
+            "TargetTrBiddingHistoryReport"
+        ]
       }
 
      
@@ -467,14 +524,6 @@
               "clearControlAggregation": false,
               "viewId": "TrCaptureVoyage",
               "viewName": "TrCaptureVoyage"
-          },
-         
-          "TargetTrCaptureVoyagePlan": {
-              "viewType": "XML",
-              "transition": "slide",
-              "clearControlAggregation": false,
-              "viewId": "TrCaptureVoyagePlan",
-              "viewName": "TrCaptureVoyagePlan"
           },
          
           "TargetPortLocMaster": {
@@ -674,7 +723,70 @@
             "clearControlAggregation": false,
             "viewId": "TrCaptureVoyageActual",
             "viewName": "TrCaptureVoyageActual"
-            }
+        },
+        "TargetTrCaptureVoyagePlan": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrCaptureVoyagePlan",
+            "viewName": "TrCaptureVoyagePlan"
+        },
+        "TargetTrCreateChartering": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrCreateChartering",
+            "viewName": "TrCreateChartering"
+        },
+        "TargetTrVoyageApproval": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrVoyageApproval",
+            "viewName": "TrVoyageApproval"
+        },
+        "TargetTrRequestQuotation": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrRequestQuotation",
+            "viewName": "TrRequestQuotation"
+        },
+        "TargetTrCompareRequestQuotation": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrCompareRequestQuotation",
+            "viewName": "TrCompareRequestQuotation"
+        },
+        "TargetTrInviteLiveFrieghtNego": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrInviteLiveFrieghtNego",
+            "viewName": "TrInviteLiveFrieghtNego"
+        },
+        "TargetTrCompareLiveFrieghtReport": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrCompareLiveFrieghtReport",
+            "viewName": "TrCompareLiveFrieghtReport"
+        },
+        "TargetTrContractAwardStatusReport": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrContractAwardStatusReport",
+            "viewName": "TrContractAwardStatusReport"
+        },
+        "TargetTrBiddingHistoryReport": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrBiddingHistoryReport",
+            "viewName": "TrBiddingHistoryReport"
+        }
 
 
        

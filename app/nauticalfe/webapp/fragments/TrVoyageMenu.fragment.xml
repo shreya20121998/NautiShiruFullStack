@@ -11,7 +11,7 @@ xmlns:core="sap.ui.core">
 		<MenuItem text="change Voyage Details"/>
 		<MenuItem text="Display Voyage Details"/>
         <MenuItem text="Maintain Events"/>
-        <MenuItem text="Voyage Approval"/>
+        <MenuItem text="Voyage Approval" press="onVoyageApproval"/>
 	</Menu>
     
 </core:FragmentDefinition>
