@@ -396,6 +396,27 @@
         ]
       },
       {
+        "name": "RouteTrChangeChartering",
+        "pattern": "TrChangeChartering",
+        "target": [
+            "TargetTrChangeChartering"
+        ]
+      },
+      {
+        "name": "RouteTrDisplayChartering",
+        "pattern": "TrDisplayChartering",
+        "target": [
+            "TargetTrDisplayChartering"
+        ]
+      },
+      {
+        "name": "RouteTrCharteringApproval",
+        "pattern": "TrCharteringApproval",
+        "target": [
+            "TargetTrCharteringApproval"
+        ]
+      },
+      {
         "name": "RouteTrVoyageApproval",
         "pattern": "TrVoyageApproval",
         "target": [
@@ -737,6 +758,27 @@
             "clearControlAggregation": false,
             "viewId": "TrCreateChartering",
             "viewName": "TrCreateChartering"
+        },
+        "TargetTrChangeChartering": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrChangeChartering",
+            "viewName": "TrChangeChartering"
+        },
+        "TargetTrDisplayChartering": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrDisplayChartering",
+            "viewName": "TrDisplayChartering"
+        },
+        "TargetTrCharteringApproval": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrCharteringApproval",
+            "viewName": "TrCharteringApproval"
         },
         "TargetTrVoyageApproval": {
             "viewType": "XML",

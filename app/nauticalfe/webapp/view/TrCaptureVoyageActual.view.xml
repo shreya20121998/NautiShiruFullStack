@@ -186,7 +186,7 @@
 
 
               <!-- document upload button -->
-                <Button id="_IDGenButton9"
+            <Button id="_IDGenButton9"
             text="Document Upload"
             press="handleNav">
             <layoutData>
@@ -218,15 +218,8 @@
                     
         </HBox>
 
-        <NavContainer
-                navigationFinished="onNavigationFinished"
-                id="navCon"
-                height="auto"
-                
-        >
+        <NavContainer navigationFinished="onNavigationFinished" id="navCon" height="auto" >
 
-
-            
             <!-- start of vessel detail section -->
             <Panel id="p1"  class="voyagePanel" >
                 <Text id="_IDGenText12" text="Enter Details" class="vgheading"/>
@@ -684,10 +677,10 @@
             <!-- Panel for ButtonA -->
             <Panel id="panelA" height="600px" class="voyagePanel">
                    <Text id="_IDGenText14" text="Plan Details" class="vgheading"></Text>
-                    
+                   
                     <Table id="Table5" class="costplantables" mode="MultiSelect" >
                         <columns>
-                            
+                           
                             <Column id="_IDGenColu36" >
                                 <Label id="abel48" text="LegId" />
                             </Column>
@@ -707,19 +700,19 @@
                              <Column id="_IDGenColumn42" >
                                 <Label id="_IDGenLabel54" text="Currency"/>
                             </Column>
-                            
+                           
                         </columns>
                         <items>
                             <ColumnListItem id="_IDGenColumnListItem7">
                                 <cells>
-                                    
+                                   
                                     <Text id="_IDGenText15" text=""/>
                                     <Input id="cost"  value="" showValueHelp="true" valueHelpRequest="showValueHelpDialogCost" />
-                                    <Input id="_IDGenTe"  value="" showValueHelp="true"/>
+                                    <Input id="_IDGenTe"  value="" />
                                      <Select id="Select4"
                                             width="200px"
                                             forceSelection="false"
-                                
+                               
                                             items="{
                                                 path: '/NAVOYGUOM'
                                             }">
@@ -727,7 +720,7 @@
                                     </Select>
                                      <Input id="DGene"  value=""/>
                                      <Input id="Curr"  value="" showValueHelp="true" valueHelpRequest="showValueHelpDialogCurr"/>
-                                    
+                                   
                                 </cells>
                             </ColumnListItem>
                         </items>
@@ -735,7 +728,7 @@
                     <Text id="_IDGenText18" text="Actual Details" class="vgheading"></Text>
                     <Table id="Table6" class="costplantables" mode="MultiSelect" >
                         <columns>
-                            
+                           
                             <Column id="_IDGenlu36" >
                                 <Label id="ab48" text="LegId" />
                             </Column>
@@ -755,21 +748,21 @@
                              <Column id="_IDGenCumn42" >
                                 <Label id="_IDGeabel54" text="Currency"/>
                             </Column>
-                            
+                           
                         </columns>
                         <items>
                             <ColumnListItem id="_IDGenColuListItem7">
                                 <cells>
-                                    
+                                   
                                     <Text id="_IenText15" text=""/>
                                     <Input id="cost1"  value="" showValueHelp="true"  valueHelpRequest="showValueHelpDialogCost"/>
-                                    <Input id="_IDGTe"  value="" showValueHelp="true"/>
+                                    <Input id="_IDGTe"  value="" />
                                     <Select
                      
                                         id="Select5"
                                             width="200px"
                                             forceSelection="false"
-                                
+                               
                                             items="{
                                                 path: '/NAVOYGUOM'
                                             }">
@@ -777,7 +770,7 @@
                                     </Select>
                                      <Input id="DGe"  value=""/>
                                      <Input id="curr1"  value="" showValueHelp="true" valueHelpRequest="showValueHelpDialogCurr"/>
-                                    
+                                   
                                 </cells>
                             </ColumnListItem>
                         </items>
@@ -786,24 +779,25 @@
 
             <!-- Panel for ButtonB -->
             <Panel id="panelB" height="600px" class="voyagePanel">
-                <HBox class="footeractualplanbutton" width= "100%">
-                            <Button icon="sap-icon://zoom-in"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://sort-ascending"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://sort-descending"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://search"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://zoom-in"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://filter" class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://slim-arrow-down" class="footeractualplanbuttonfilter"/>
-                            <Button icon="sap-icon://sum"  class="footeractualplanbutton"/>
-                            <Button icon="../images/subtotals.png"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://print"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://detail-view"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://slim-arrow-down" class="footeractualplanbuttonfilter"/>
-                            <Button icon="../images/Export.png"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://slim-arrow-down" class="footeractualplanbuttonfilter"/>
-                            <Button icon="sap-icon://table-chart"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://message-information" class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://full-screen" class="footeractualplanbutton"/>
+                <HBox  >
+ 
+                            <Button icon="sap-icon://zoom-in"  class="btnIcon"/>
+                            <Button icon="sap-icon://sort-ascending"  class="btnIcon"/>
+                            <Button icon="sap-icon://sort-descending"  class="btnIcon"/>
+                            <Button icon="sap-icon://search"  class="btnIcon"/>
+                            <Button icon="sap-icon://zoom-in"  class="btnIcon"/>
+                            <Button icon="sap-icon://filter" class="btnIcon"/>
+                            <Button icon="sap-icon://slim-arrow-down" class="btnIcon"/>
+                            <Button icon="sap-icon://sum"  class="btnIcon"/>
+                            <Button icon="../images/subtotals.png"  class="btnIcon"/>
+                            <Button icon="sap-icon://print"  class="btnIcon"/>
+                            <Button icon="sap-icon://detail-view"  class="btnIcon"/>
+                            <Button icon="sap-icon://slim-arrow-down" class="btnIcon"/>
+                            <Button icon="../images/Export.png"  class="btnIcon"/>
+                            <Button icon="sap-icon://slim-arrow-down" class="btnIcon"/>
+                            <Button icon="sap-icon://table-chart"  class="btnIcon"/>
+                            <Button icon="sap-icon://message-information" class="btnIcon"/>
+                            <Button icon="sap-icon://full-screen" class="btnIcon"/>
                         </HBox>
                         <Table width="100%" class="costplantables">
                             <columns>
@@ -840,23 +834,23 @@
                             </columns>
                         </Table>
                          <HBox class="footeractualplanbutton">
-                            <Button icon="sap-icon://zoom-in"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://sort-ascending"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://sort-descending"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://search"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://zoom-in"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://filter" class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://slim-arrow-down" class="footeractualplanbuttonfilter"/>
-                            <Button icon="sap-icon://sum"  class="footeractualplanbutton"/>
-                            <Button icon="../images/subtotals.png"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://print"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://detail-view"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://slim-arrow-down" class="footeractualplanbuttonfilter"/>
-                            <Button icon="../images/Export.png"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://slim-arrow-down" class="footeractualplanbuttonfilter"/>
-                            <Button icon="sap-icon://table-chart"  class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://message-information" class="footeractualplanbutton"/>
-                            <Button icon="sap-icon://full-screen" class="footeractualplanbutton"/>
+                            <Button icon="sap-icon://zoom-in"  class="btnIcon"/>
+                            <Button icon="sap-icon://sort-ascending"  class="btnIcon"/>
+                            <Button icon="sap-icon://sort-descending"  class="btnIcon"/>
+                            <Button icon="sap-icon://search"  class="btnIcon"/>
+                            <Button icon="sap-icon://zoom-in"  class="btnIcon"/>
+                            <Button icon="sap-icon://filter" class="btnIcon"/>
+                            <Button icon="sap-icon://slim-arrow-down" class="btnIcon"/>
+                            <Button icon="sap-icon://sum"  class="btnIcon"/>
+                            <Button icon="../images/subtotals.png"  class="btnIcon"/>
+                            <Button icon="sap-icon://print"  class="btnIcon"/>
+                            <Button icon="sap-icon://detail-view"  class="btnIcon"/>
+                            <Button icon="sap-icon://slim-arrow-down" class="btnIcon"/>
+                            <Button icon="../images/Export.png"  class="btnIcon"/>
+                            <Button icon="sap-icon://slim-arrow-down" class="btnIcon"/>
+                            <Button icon="sap-icon://table-chart"  class="btnIcon"/>
+                            <Button icon="sap-icon://message-information" class="btnIcon"/>
+                            <Button icon="sap-icon://full-screen" class="btnIcon"/>
                         </HBox>
                         <Table width="100%" class="costplantables">
                             <columns>
@@ -892,7 +886,7 @@
                                 </Column>
                             </columns>
                         </Table>
-
+ 
             </Panel>
 
         </NavContainer>

@@ -102,6 +102,18 @@ sap.ui.define(
       const oRouter = this.getOwnerComponent().getRouter();
       oRouter.navTo("RouteTrCreateChartering");
     },
+    onChangeChartering: function(){
+      const oRouter = this.getOwnerComponent().getRouter();
+      oRouter.navTo("RouteTrChangeChartering");
+    },
+    onDisplayChartering: function(){
+      const oRouter = this.getOwnerComponent().getRouter();
+      oRouter.navTo("RouteTrDisplayChartering");
+    },
+    onCharteringApproval: function(){
+      const oRouter = this.getOwnerComponent().getRouter();
+      oRouter.navTo("RouteTrCharteringApproval");
+    },
     onVoyageApproval: function(){
       const oRouter = this.getOwnerComponent().getRouter();
       oRouter.navTo("RouteTrVoyageApproval");
@@ -121,7 +133,15 @@ sap.ui.define(
     onCompareLiveFrieghtReportPress: function () {
       const oRouter = this.getOwnerComponent().getRouter();
       oRouter.navTo("RouteTrCompareLiveFrieghtReport");
-    }
+    },
+    onContractAwardStatusReport: function () {
+      const oRouter = this.getOwnerComponent().getRouter();
+      oRouter.navTo("RouteTrContractAwardStatusReport");
+    },
+    onBiddingHistoryReport: function () {
+      const oRouter = this.getOwnerComponent().getRouter();
+      oRouter.navTo("RouteTrBiddingHistoryReport");
+    },
 
 
     });

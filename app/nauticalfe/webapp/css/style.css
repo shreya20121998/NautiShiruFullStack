@@ -157,8 +157,9 @@
     width: 100%;
 }
 .vdHeaderLayout{
-    margin-left: 6rem;
+    margin-left: 4rem;
     margin-bottom: 2rem;
+    justify-content: space-between;
 }
 
 .table{
