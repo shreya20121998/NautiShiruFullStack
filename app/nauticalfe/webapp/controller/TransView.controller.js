@@ -98,6 +98,22 @@ sap.ui.define(
       const oRouter = this.getOwnerComponent().getRouter();
       oRouter.navTo("RouteTrCaptureVoyageActual");
     },
+    onChangeVoyageDetails: function(){
+      const oRouter = this.getOwnerComponent().getRouter();
+      oRouter.navTo("RouteTrChangeVoyageDetails");
+    },
+    onDisplayVoyageDetails: function(){
+      const oRouter = this.getOwnerComponent().getRouter();
+      oRouter.navTo("RouteTrDisplayVoyageDetails");
+    },
+    onMaintainEvent: function(){
+      const oRouter = this.getOwnerComponent().getRouter();
+      oRouter.navTo("RouteTrMaintainEvent");
+    },
+    onVoyageApproval: function(){
+      const oRouter = this.getOwnerComponent().getRouter();
+      oRouter.navTo("RouteTrVoyageApproval");
+    },
     onCreateChartering: function(){
       const oRouter = this.getOwnerComponent().getRouter();
       oRouter.navTo("RouteTrCreateChartering");
@@ -113,10 +129,6 @@ sap.ui.define(
     onCharteringApproval: function(){
       const oRouter = this.getOwnerComponent().getRouter();
       oRouter.navTo("RouteTrCharteringApproval");
-    },
-    onVoyageApproval: function(){
-      const oRouter = this.getOwnerComponent().getRouter();
-      oRouter.navTo("RouteTrVoyageApproval");
     },
     onReqQuotationPress: function () {
       const oRouter = this.getOwnerComponent().getRouter();

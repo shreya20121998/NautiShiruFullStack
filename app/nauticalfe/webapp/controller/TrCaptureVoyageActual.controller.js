@@ -411,7 +411,7 @@ sap.ui.define(
     
         // Open the dialog
         oDialog.open();
-    },
+      },
     
 
 

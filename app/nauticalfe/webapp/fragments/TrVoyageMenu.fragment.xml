@@ -8,9 +8,9 @@ xmlns:core="sap.ui.core">
             <MenuItem text="Actual Info Details" press="onActual"/>	
 		</items>
         </MenuItem>
-		<MenuItem text="change Voyage Details"/>
-		<MenuItem text="Display Voyage Details"/>
-        <MenuItem text="Maintain Events"/>
+		<MenuItem text="change Voyage Details" press="onChangeVoyageDetails"/>
+		<MenuItem text="Display Voyage Details" press="onDisplayVoyageDetails"/>
+        <MenuItem text="Maintain Events" press="onMaintainEvent"/>
         <MenuItem text="Voyage Approval" press="onVoyageApproval"/>
 	</Menu>
     

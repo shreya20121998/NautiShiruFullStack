@@ -417,6 +417,27 @@
         ]
       },
       {
+        "name": "RouteTrChangeVoyageDetails",
+        "pattern": "TrChangeVoyageDetails",
+        "target": [
+            "TargetTrChangeVoyageDetails"
+        ]
+      },
+      {
+        "name": "RouteTrDisplayVoyageDetails",
+        "pattern": "TrDisplayVoyageDetails",
+        "target": [
+            "TargetTrDisplayVoyageDetails"
+        ]
+      },
+      {
+        "name": "RouteTrMaintainEvent",
+        "pattern": "TrMaintainEvent",
+        "target": [
+            "TargetTrMaintainEvent"
+        ]
+      },
+      {
         "name": "RouteTrVoyageApproval",
         "pattern": "TrVoyageApproval",
         "target": [
@@ -465,8 +486,7 @@
             "TargetTrBiddingHistoryReport"
         ]
       }
-
-     
+      
       ],
       "targets": {
           "TargetHome": {
@@ -766,13 +786,6 @@
             "viewId": "TrChangeChartering",
             "viewName": "TrChangeChartering"
         },
-        "TargetTrDisplayChartering": {
-            "viewType": "XML",
-            "transition": "slide",
-            "clearControlAggregation": false,
-            "viewId": "TrDisplayChartering",
-            "viewName": "TrDisplayChartering"
-        },
         "TargetTrCharteringApproval": {
             "viewType": "XML",
             "transition": "slide",
@@ -780,6 +793,35 @@
             "viewId": "TrCharteringApproval",
             "viewName": "TrCharteringApproval"
         },
+        "TargetTrDisplayChartering": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrDisplayChartering",
+            "viewName": "TrDisplayChartering"
+        },
+        "TargetTrChangeVoyageDetails": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrChangeVoyageDetails",
+            "viewName": "TrChangeVoyageDetails"
+        },
+        "TargetTrDisplayVoyageDetails": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrDisplayVoyageDetails",
+            "viewName": "TrDisplayVoyageDetails"
+        },
+        "TargetTrMaintainEvent": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "TrMaintainEvent",
+            "viewName": "TrMaintainEvent"
+        },
+        
         "TargetTrVoyageApproval": {
             "viewType": "XML",
             "transition": "slide",
